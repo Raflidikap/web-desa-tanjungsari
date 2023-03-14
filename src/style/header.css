@@ -1,0 +1,24 @@
+.nav-link{
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 1px;
+}
+
+.nav-link:hover{
+    padding-bottom: 1px;
+    border-bottom: 2px solid white;
+}
+
+.navbar-brand{
+    font-weight: 700;
+    text-transform: uppercase;   
+}
+
+.active{
+    border-bottom:2px solid white;
+}
+
+img{
+    width: 10%;
+    height: 10%;
+}
