@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import Beranda from "./pages/Beranda"
 import Header from './components/Header'
@@ -12,13 +12,13 @@ function App() {
       <Beranda/>
       <Topografi/> */ }
       <Header/>
-      <Router>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Beranda/>} />
           <Route path="/profiledesa" element={<ProfileDesa/>} />
           <Route path="/umkm" element={<UMKM/>} />
         </Routes>
-      </Router>
+      </BrowserRouter>
     </div>
   );
 }

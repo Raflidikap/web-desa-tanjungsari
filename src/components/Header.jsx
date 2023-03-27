@@ -14,10 +14,10 @@ const header = () => {
     </button>
     <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div className="navbar-nav me-4">
-        <a className="nav-link active me-4" aria-current="page" href="#">Beranda</a>
-        <a className="nav-link me-4" href="#">Tentang Desa</a>
-        <a className="nav-link me-4" href="#">UMKM</a>
-        <a className="nav-link me-4">Surat Pengajuan</a>
+        <a className="nav-link active me-4" aria-current="page" href="/">Beranda</a>
+        <a className="nav-link me-4" href="/profiledesa">Tentang Desa</a>
+        <a className="nav-link me-4" href="/umkm">UMKM</a>
+        <a className="nav-link me-4" href="/umkm">Surat Pengajuan</a>
       </div>
     </div>
   </div>
