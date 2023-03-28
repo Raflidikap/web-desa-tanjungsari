@@ -1,48 +1,76 @@
-import pemandangan from "../assets/pemandangan.jpg"
-import React from "react"
-import '../style/carousel.css'
-const carousel =()=>{
-    return(
-    <>
-    <div id="carouselExampleCaptions" className="carousel slide">
-  <div className="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-      <img src={pemandangan} className="d-block w-100" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+// import pemandangan from "../assets/pemandangan.jpg"
+// import Carousel from "react-bootstrap/Carousel";
+import "../style/carousel.css";
+import React from "react";
+// import React, { useEffect, useState } from 'react'
+// import { CSSTransition } from 'react-transition-group'
+// import { ImageCarouselContainer, ImageCarouselSlide } from './imagecarousel.styles'
+
+// const [productList, setProductList] = useState([]);
+
+// const getProductList = async () =>{
+//   const products = await fetch('https://fakestoreapi.com/products').then(res=>res.json())
+
+//   return products
+// }
+
+// useEffect(() => {
+//   getProductList().then((result) => {
+//     setProductList(result);
+//     console.log(productList)
+//   });
+// }, []);
+const images = [
+  "https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+  "https://images.unsplash.com/photo-1503424886307-b090341d25d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80",
+  "https://images.unsplash.com/photo-1495312040802-a929cd14a6ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80",
+];
+
+const Carousel = () => {
+  // const [activeImage, setActiveImage] = useState(1);
+  // const [imagesArr, setImagesArr] = useState([])
+
+  const Images = () => {
+    return images.map((image, i) => {
+      return (
+        <div
+          id="carouselExampleAutoplaying"
+          className="carousel slide"
+          data-bs-ride="carousel"
+          key={i}
+        >
+          <div className="carousel-item active">
+            <img src={image} className="d-block w-100" alt="" />
+          </div>
+        </div>
+      );
+    });
+  };
+
+  return (
+    <div id="carouselExample" className="carousel slide">
+      <div className="carousel-inner">
+        <Images />
       </div>
+      <button
+        className="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
+      </button>
+      <button
+        className="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
+      </button>
     </div>
-    <div className="carousel-item">
-      <img src={pemandangan} className="d-block w-100" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div className="carousel-item">
-      <img src={pemandangan} className="d-block w-100" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-  </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
-    </>
-    )
-}
-export default carousel;
+  );
+};
+export default Carousel;

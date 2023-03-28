@@ -1,0 +1,19 @@
+.organisasi-wrapper{
+    background: #98FB98;
+}
+.visi-misi-wrapper{
+    background: #F0E8EB;
+}
+.visi-misi-box{
+    background: #FFFFFF;
+    width: 60%;
+    border-radius: 32px;
+}
+.organisasi-title{
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.organisasi-image{
+    width: 100rem;
+}

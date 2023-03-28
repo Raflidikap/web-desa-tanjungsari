@@ -14,9 +14,9 @@ const Profile = () => {
                 Struktur Pemerintahan Desa Tanjungsari
               </h2>
             </Col>
-            <Col sm={9} className="m-auto">
+            <Col sm={9} className="m-auto ">
               <Image
-                className="img-fluid d-block mx-auto p-2"
+                className="img-fluid d-block mx-auto p-2 organisasi-image"
                 src={bagan}
               ></Image>
             </Col>
