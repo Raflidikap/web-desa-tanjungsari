@@ -2,6 +2,9 @@
     background: #98FB98;
     max-width: 100%;
 }
+.profile-wrapper{
+    overflow-x: hidden;
+}
 .visi-misi-box{
     background: #FFFFFF;
     width: 60%;

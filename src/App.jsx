@@ -12,8 +12,9 @@ function App() {
       {/* <Carousel/>
       <Beranda/>
       <Topografi/> */ }
-      <Header/>
+      
       <Router>
+      <Header/>
         <Routes>
           <Route path="/" element={<Beranda/>} />
           <Route path="/profiledesa" element={<ProfileDesa/>} />
