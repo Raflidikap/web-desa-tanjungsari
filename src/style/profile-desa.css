@@ -1,8 +1,6 @@
 .organisasi-wrapper{
     background: #98FB98;
-}
-.visi-misi-wrapper{
-    background: #F0E8EB;
+    max-width: 100%;
 }
 .visi-misi-box{
     background: #FFFFFF;
@@ -16,4 +14,12 @@
 
 .organisasi-image{
     width: 100rem;
+}
+
+.sensus-penduduk{
+    background: #98FB98;
+}
+
+.visi-misi{
+    background: #F0E8EB;
 }
