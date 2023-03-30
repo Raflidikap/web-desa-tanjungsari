@@ -1,6 +1,6 @@
 import React from "react";
 import * as icons from 'react-bootstrap-icons';
-// import logo from "../assets/logo-kabupaten.png"
+import logo from "../assets/logo-kabupaten.png"
 const Footer = () =>{
     return (
         <>
@@ -13,6 +13,9 @@ const Footer = () =>{
                 <div className="container text-center text-md-start pt-5">
                     <div className="row mt-3">
                     <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <img src={logo} alt="" className="img-fluid d-block mx-auto w-50"/>
+                    </div>
+                    <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <h6 className="text-uppercase fw-bold">Desa Tanjungsari</h6>
                         <hr
                             className="mb-4 mt-0 d-inline-block mx-auto"
@@ -23,7 +26,7 @@ const Footer = () =>{
                         </p>
                     </div>
 
-                    <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <div className="col-md-2 col-lg-2 col-xl-1 mx-auto mb-4">
                         <h6 className="text-uppercase fw-bold">UMKM</h6>
                         <hr
                             className="mb-4 mt-0 d-inline-block mx-auto"
@@ -43,7 +46,7 @@ const Footer = () =>{
                         </p>
                     </div>
 
-                    <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    {/* <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                         <h6 className="text-uppercase fw-bold">Pengajuan Surat</h6>
                         <hr
                             className="mb-4 mt-0 d-inline-block mx-auto"
@@ -61,7 +64,7 @@ const Footer = () =>{
                         <p>
                         <a href="#!" className="text-dark">Help</a>
                         </p>
-                    </div>
+                    </div> */}
 
                     <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                         <h6 className="text-uppercase fw-bold">Kontak</h6>
@@ -79,11 +82,10 @@ const Footer = () =>{
                 </section>
 
                 <div
-                    className="text-center p-3 copyright-wrapper"
+                    className="text-end p-3 pe-4 copyright-wrapper "
                     style={{backgroundColor:"rgba(0, 0, 0, 0.2)"}}
                     >
-                © 2020 Copyright:
-                Supported by FIK UPNVJ
+                © 2023 - Powered by FIK UPNVJ
                 </div>
             </footer>  
         </>

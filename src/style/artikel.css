@@ -8,6 +8,10 @@
     width: 30%;
 }
 
+.artikel-wrapper{
+  background: #F0E8EB;
+}
+
 .card-title {
     font-weight: bold;
   }
