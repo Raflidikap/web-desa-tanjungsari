@@ -12,7 +12,7 @@ const Event=()=>{
     const EventsCard = () => {
         return events.map((event, i)=>{
             return(
-            <Col key={i} md="4" className='pb-4'>
+            <Col key={i} md="4" sm="6" className='pb-4 g-5'>
             <Card className="event-card me-4">
                 <Card.Img variant="top" src={logo} className="event-image mx-auto"/>
                 <Card.Body className='p-4'>

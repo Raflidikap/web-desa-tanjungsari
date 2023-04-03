@@ -39,52 +39,6 @@ const images = [{
 ];
 
 const CarouselS = () => {
-  // const [activeImage, setActiveImage] = useState(1);
-  // const [imagesArr, setImagesArr] = useState([])
-
-  // const Images = () => {
-  //   return images.map((image, i) => {
-  //     return (
-  //       <div
-  //         id="carouselExampleAutoplaying"
-  //         className="carousel slide"
-  //         data-bs-ride="carousel"
-  //         key={i}
-  //       >
-  //         <div className="carousel-item">
-  //           <img src={image} className="d-block w-100" alt="" />
-  //         </div>
-  //       </div>
-  //     );
-  //   });
-  // };
-
-  // return (
-  //   <div id="carouselExample" className="carousel slide">
-  //     <div className="carousel-inner">
-  //       <Images />
-  //     </div>
-  //     <button
-  //       className="carousel-control-prev"
-  //       type="button"
-  //       data-bs-target="#carouselExample"
-  //       data-bs-slide="prev"
-  //     >
-  //       <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-  //       <span className="visually-hidden">Previous</span>
-  //     </button>
-  //     <button
-  //       className="carousel-control-next"
-  //       type="button"
-  //       data-bs-target="#carouselExample"
-  //       data-bs-slide="next"
-  //     >
-  //       <span className="carousel-control-next-icon" aria-hidden="true"></span>
-  //       <span className="visually-hidden">Next</span>
-  //     </button>
-  //   </div>
-  // );
-
   return (
     <div>
       <Carousel>

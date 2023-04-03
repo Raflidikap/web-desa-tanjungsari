@@ -1,6 +1,5 @@
 import React from "react";
 import { Image, Col, Row } from "react-bootstrap";
-import "../style/profile-desa.css";
 import bagan from "../assets/bagan_pemerintahan.svg";
 import TextCard from "../components/TextCard";
 import Topografi from "../components/Topografi"
