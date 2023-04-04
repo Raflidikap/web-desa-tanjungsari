@@ -13,7 +13,7 @@ const Footer = () =>{
                 <div className="container text-center text-md-start pt-5">
                     <div className="row mt-3">
                     <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <img src={logo} alt="" className="img-fluid d-block mx-auto w-50"/>
+                        <img src={logo} alt="" className="img-fluid d-block mx-auto w-50 logo-footer"/>
                     </div>
                     <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <h6 className="text-uppercase fw-bold">Desa Tanjungsari</h6>

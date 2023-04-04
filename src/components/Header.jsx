@@ -1,4 +1,3 @@
-import '../style/header.css'
 import logo_desa from "../assets/logo-kabupaten.png"
 import React from 'react'
 import Container from 'react-bootstrap/Container';
@@ -21,20 +20,20 @@ const header = () => {
     return (
 
       <Navbar bg="light" expand="lg" className='bg-body-tertiary sticky-top'>
-      <Container>
+      
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
         <Container>
-          <Navbar.Brand href="#">
+          <Navbar.Brand href="#" className="ms-5">
             <img
               src={logo_desa}
-              className="d-inline-block align-text-left me-4"
+              className="d-inline-block align-text-left me-4 ms-5"
               alt="desa tanjungsari"
             />
             Desa Tanjungsari
           </Navbar.Brand>
         </Container>
-          <Nav className="me-auto">
+          <Nav className="mx-auto">
             <NavLink to='/'
             className={({isActive})=> (isActive ? activeLink : normalLink)}>
             Beranda
@@ -53,7 +52,7 @@ const header = () => {
             </NavLink>
           </Nav>
         </Navbar.Collapse>
-      </Container>
+      
     </Navbar>
     )
 }

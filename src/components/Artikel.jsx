@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Card, Row, Col, Container } from 'react-bootstrap'
+import {Card, Row, Col, Container, Button } from 'react-bootstrap'
 import logo from "../assets/logo-kabupaten.png";
 import '../style/umkm.css'
 
@@ -13,7 +13,8 @@ const UMKM=()=>{
     return(
         <>
         <Container className="artikel-container">
-            <Row className='justify-content-center mt-5'>
+        <h2 className='text-center p-4'>Artikel</h2>
+            <Row className='justify-content-center'>
                 {umkms.map((item, i) =>(
                     <Col key={i} xl="12"  className='pb-4 g-5'>
                         <Card className="p-4 d-flex artikelCard-wrapper">
@@ -26,7 +27,10 @@ const UMKM=()=>{
                         </Card>              
                     </Col>
                 ))}          
-            </Row> 
+            </Row>
+            <div className='justify-content-center d-flex p-4'>
+                <Button variant='primary' className='text-center artikel-more-btn pe-4 ps-4'> Muat Lebih Banyak Artikel</Button>
+            </div>
         </Container>
         </>
     );
