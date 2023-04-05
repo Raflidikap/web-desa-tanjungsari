@@ -256,3 +256,11 @@ iframe {
   font-weight: bold;
 }
 /* End Topografi */
+
+/* Pagination */
+.button-pagination{
+  margin: 10px    5px ;
+  padding: 5px 10px;
+  background-color: whitesmoke;
+}
+/* End Pagination */
