@@ -1,51 +1,63 @@
 import React, { useState } from "react";
-import {Card, Row, Col, Container, Button } from 'react-bootstrap'
+import { Card, Row, Col, Container } from "react-bootstrap";
 import Pagination from "./Pagination";
 import logo from "../assets/logo-kabupaten.png";
-import '../style/artikel.css'
+import "../style/artikel.css";
 
-const UMKM=()=>{
-    const [umkms] = useState([
-        {title: 'Hakiki Collection', body:'lorem',category:'Sepatu', id:1},
-        {title: 'Kayu Haji ..', body:'lorem',category:'Kayu', id:2},
-        {title: 'Konveksi Deni Dhafir', body:'lorem',category:'Tas', id:3},
-        {title: 'Hakiki Collection 2', body:'lorem',category:'Sepatu', id:4},
-        {title: 'Kayu Haji 2', body:'lorem',category:'Kayu', id:5},
-        {title: 'Konveksi Deni Dhafir 2', body:'lorem',category:'Tas', id:6},
-    ]);
-    const [currentPage, setCurrentPage] =useState(1)
-    const [artikelPerPage] = useState(3)
+const Artikel = () => {
+  const [artikels] = useState([
+    { title: "Hakiki Collection", body: "lorem", author: "Admin, 4 Agustus 2023", id: 1, paragraph:"lorem ipsum dolor sit amet."},
+    { title: "Kayu Haji ..", body: "lorem", author: "Admin, 4 Agustus 2023", id: 2, paragraph:"lorem ipsum dolor sit amet." },
+    { title: "Konveksi Deni Dhafir", body: "lorem", author: "Admin, 4 Agustus 2023", id: 3, paragraph:"lorem ipsum dolor sit amet." },
+    { title: "Hakiki Collection 2", body: "lorem", author: "Admin, 4 Agustus 2023", id: 4, paragraph:"lorem ipsum dolor sit amet." },
+    { title: "Kayu Haji 2", body: "lorem", author: "Admin, 4 Agustus 2023", id: 5, paragraph:"lorem ipsum dolor sit amet." },
+    { title: "Konveksi Deni Dhafir 2", body: "lorem", author: "Admin, 4 Agustus 2023", id: 6, paragraph:"lorem ipsum dolor sit amet." },
+  ]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [artikelPerPage] = useState(4);
 
-    const lastartikels = currentPage * artikelPerPage
-    const firstartikels = lastartikels - artikelPerPage
-    const currentartikels = umkms.slice(firstartikels, lastartikels)
+  const lastartikels = currentPage * artikelPerPage;
+  const firstartikels = lastartikels - artikelPerPage;
+  const currentartikels = artikels.slice(firstartikels, lastartikels);
 
-    return(
-        <>
-        <Container className="artikel-container">
-        <h2 className='text-center p-4'>Artikel</h2>
-            <Row className='justify-content-center'>
-                {currentartikels.map((item, i) =>(
-                    <Col key={i} xl="12"  className='pb-4 g-5'>
-                        <Card className="p-4 d-flex artikelCard-wrapper">
-                            <Card.Img variant="top" src={logo} className="artikel-image"/>
-                            <Card.Body className="">
-                                <Card.Title className="card-title">{item.title}</Card.Title>
-                                <Card.Text>{item.category}</Card.Text>
-                                <Card.Text>{item.body}</Card.Text>
-                            </Card.Body>
-                        </Card>              
-                    </Col>
-                ))}          
-            </Row>
-            <div className="pagination-button text-center">
-                <Pagination eventLength={umkms.length} eventPerPage={artikelPerPage} setCurrentPage={setCurrentPage}/>
-            </div>
-            <div className='justify-content-center d-flex p-4'>
-                <Button variant='primary' className='text-center artikel-more-btn pe-4 ps-4'> Muat Lebih Banyak Artikel</Button>
-            </div>
+  const ArtikelCard = () => {
+    return currentartikels.map((artikel, i) => {
+      return (
+        <Col key={i} md="6" className="pb-4">
+          <Card className="p-4 d-flex artikelCardWrapper" me-4>
+            <Card.Img
+              variant="start"
+              src={logo}
+              className="artikelImage"
+            />
+            <Card.Body className="p-4">
+              <Card.Text className="artikelCardAuthor">{artikel.author}</Card.Text>
+              <Card.Title className="artikelCardTitle">{artikel.title}</Card.Title>
+              <Card.Text className="artikelCardParagraph">{artikel.paragraph}</Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      );
+    });
+  };
+  return (
+    <>
+      <div className="artikelWrapper pt-5">
+        <Container className="artikelContainer pt-5">
+          <h2 className="artikelTitleWrapper">Artikel Desa Tanjungsari</h2>
+          <Row className="pt-5">
+            <ArtikelCard />
+          </Row>
+          <div className="pagination-button text-center">
+            <Pagination
+              eventLength={artikels.length}
+              eventPerPage={artikelPerPage}
+              setCurrentPage={setCurrentPage}
+            ></Pagination>
+          </div>
         </Container>
-        </>
-    );
-}
-export default UMKM
+      </div>
+    </>
+  );
+};
+export default Artikel;

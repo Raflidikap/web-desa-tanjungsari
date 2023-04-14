@@ -1,8 +1,17 @@
 /* Article*/
 
-.artikel-container h2{
+.artikelTitleWrapper{
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.artikelTitleWrapper::after{
+  content: '';
+  display: block;
+  width: 500px;
+  margin-top: 10px;
+  border-bottom: 3px solid #045E18;
 }
 .card-article {
   flex-direction: row;
@@ -14,14 +23,8 @@
   width: 30%;
 }
 
-.artikel-wrapper {
-  background: #f0e8eb;
-}
-
-.artikel-more-btn{
-  max-width: fit-content;
-  border-radius: 32px;
-  text-align: center;
+.artikelWrapper {
+  background: #CCDBCC;
 }
 
 .card-title {
@@ -31,14 +34,16 @@
 .artikel-container{
   max-width: 700px;
 }
-.artikel-image{
+.artikelImage{
   width: 200px;
   height: 200px;
   object-fit: contain;
 }
-.artikelCard-wrapper{
+.artikelCardWrapper{
   flex-direction: row;
   width: inherit;
+  width: 550px;
+  border-radius: 5px;
 }
 @media only screen and (max-width: 768px) {
   a {
@@ -51,12 +56,31 @@
     margin: 0;
   }
   .card img {
+    width: 35%;
+  }
+  .artikelTitleWrapper::after{
+    content: '';
+    display: block;
     width: 50%;
+    margin-top: 10px;
+    border-bottom: 3px solid #045E18;
   }
 }
 @media only screen and (max-width: 1200px) {
   .card img {
-    width: 40%;
+    width: 25%;
   }
+  .artikelCardWrapper{
+    width: 85%;
+  }
+}
+
+.artikelCardParagraph::after{
+  content: '';
+  display: block;
+  width: auto;
+  margin: auto;
+  margin-top: 10px;
+  border-bottom: 3px solid #045E18;
 }
 /* End Article */
