@@ -8,11 +8,7 @@ import UMKM from "./pages/Umkm"
 import Footer from './components/Footer';
 function App() {
   return (
-    <div className="App">
-      {/* <Carousel/>
-      <Beranda/>
-      <Topografi/> */ }
-      
+    <div className="App">      
       <Router>
       <Header/>
         <Routes>

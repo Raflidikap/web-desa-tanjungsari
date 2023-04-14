@@ -21,15 +21,6 @@ const Profile = () => {
                 src={bagan}
               ></Image>
             </Col>
-            {/* <Container className="rounded-8 p-2 bg-primary">
-                <h2 className="text-center p-2">Struktur Organisasi Desa Tanjungsari</h2>
-            </Container>
-            <Container>
-                    <Col sm={9} className="m-auto">
-                    <Image className="img-fluid d-block mx-auto p-4" src={bagan}>
-                    </Image>
-                    </Col>
-            </Container>     */}
           </div>
         </Row>
         <Row className="m-auto visi-misi">
@@ -43,30 +34,6 @@ const Profile = () => {
         </Row>
 
       </div>
-
-      {/* <Col>
-            <Row>
-            <div className="organisasi-wrapper">
-            <Container className="rounded-8 p-2 bg-primary">
-                <h2 className="text-center p-2">Struktur Organisasi Desa Tanjungsari</h2>
-            </Container>
-            <Container>
-                    <Col sm={9} className="m-auto">
-                    <Image className="img-fluid d-block mx-auto p-4" src={bagan}>
-                    </Image>
-                    </Col>
-            </Container>    
-            </div>
-            </Row>
-            <Row>
-            <div className="visi-misi-wrapper p-4">
-            <Container className="rounded-6 p-4 visi-misi-box">
-                <h2>Visi & Misi Desa</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In harum nisi officiis commodi minus numquam veritatis maxime excepturi quos sit est cum, tenetur dolor cupiditate? Neque deleniti nihil consequuntur iste?</p>
-            </Container>
-            </div>
-            </Row>
-        </Col> */}
     </>
   );
 };

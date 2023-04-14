@@ -6,12 +6,12 @@ import logo from '../assets/logo-kabupaten.png'
 
 const Event=()=>{
     const [events] = useState([
-        {title: '1', body:'lorem',category:'test', id:1},
-        {title: '2', body:'lorem',category:'test', id:2},
-        {title: '3', body:'lorem',category:'test', id:3},
-        {title: '4', body:'lorem',category:'test', id:4},
-        {title: '5', body:'lorem',category:'test', id:5},
-        {title: '6', body:'lorem',category:'test', id:6},
+        {title: '1', body:'lorem',category:'Admin, 12 April 2023', id:1},
+        {title: '2', body:'lorem',category:'Admin, 12 April 2023', id:2},
+        {title: '3', body:'lorem',category:'Admin, 12 April 2023', id:3},
+        {title: '4', body:'lorem',category:'Admin, 12 April 2023', id:4},
+        {title: '5', body:'lorem',category:'Admin, 12 April 2023', id:5},
+        {title: '6', body:'lorem',category:'Admin, 12 April 2023', id:6},
     ]);
     const [currentPage, setCurrentPage] =useState(1)
     const [eventPerPage] = useState(3)
@@ -44,7 +44,7 @@ const Event=()=>{
     return(
         <div className="event-wrapper">
         <Container className=''>
-            <h2 className='text-center p-4'>Event</h2>
+            <h2 className='text-center p-4 event-title'>Event</h2>
             <Row className='justify-content-center'>
                 <EventsCard/>
             </Row>

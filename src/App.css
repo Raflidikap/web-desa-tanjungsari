@@ -38,7 +38,6 @@
 }
 .artikel-image{
   width: 200px;
-  /* aspect-ratio: 1/3;*/
   height: 200px;
   object-fit: contain;
 }
@@ -96,18 +95,30 @@
 /* Carousel */
 .carousel-item img {
   max-width: 100%;
-  height: 90vh;
+  height: 100vh;
 }
 .carousel {
+  margin-top: -90px;
   overflow: hidden;
 }
 /* End Carousel */
 
 /* Event */
-.event-wrapper h2{
+.event-title{
   text-transform: uppercase;
   font-weight: bold;
+  
 }
+.event-title::after{
+  content: '';
+  display: block;
+  width: 150px;
+  margin: auto;
+  margin-top: 10px;
+  border-bottom: 3px solid #045E18;
+}
+
+
 .event-image {
   max-width: 150px;
 }
@@ -115,13 +126,16 @@
 .event-card {
   max-width: 345px;
   max-height: fit-content;
-  border-radius: 20px;
   padding: 10px;
+  text-align: justify;
+  border-radius: 5px;
+background: linear-gradient(315deg, #dddddd, #ffffff);
+box-shadow:  -18px -18px 36px #e4e4e4,
+             18px 18px 36px #ffffff;
 }
 
 .event-wrapper {
   width: 100%;
-  background: #98fb98;
 }
 
 .event-more-btn{
@@ -136,11 +150,16 @@
 /* End Footer */
 
 /* Header / Navbar */
+nav{
+  height: 90px;
+}
 .nav-link {
+  word-spacing: 2px;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 500;
   padding-bottom: 1px;
   white-space: nowrap;
+  color: whitesmoke !important;
 }
 
 .nav-link:hover {
@@ -149,10 +168,15 @@
 }
 
 .navbar-brand {
-  font-weight: bold;
+  word-spacing: 5px;
+  font-weight: 500;
   text-transform: uppercase;
+  color: whitesmoke;
 }
-
+.nabar-brand:hover{
+  font-weight: 500;
+  color: whitesmoke !important;
+}
 .navbar-brand img{
   width: 50px;
 }

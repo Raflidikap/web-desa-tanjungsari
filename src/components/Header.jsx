@@ -5,14 +5,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink} from 'react-router-dom';
 
-// const navigation = () =>[
-//   {
-//     {name:'Beranda', href:'/'},
-//     {name:'Tentang Desa', href:'/profildesa'},
-//     {name:'UMKM', href:'/umkm'},
-//     {name:'Pengajuan Surat', href:'/'}
-//   }
-// ];
 
 const header = () => {
   const activeLink = 'me-4 nav-link active'
