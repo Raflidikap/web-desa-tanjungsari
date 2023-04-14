@@ -1,28 +1,30 @@
-.organisasi-wrapper{
-    background: #98FB98;
+/* Profile Desa */
+.organisasi-wrapper {
+    background: #98fb98;
     max-width: 100%;
-}
-.profile-wrapper{
+  }
+  .profile-wrapper {
     overflow-x: hidden;
-}
-.visi-misi-box{
-    background: #FFFFFF;
+  }
+  .visi-misi-box {
+    background: #ffffff;
     width: 60%;
     border-radius: 32px;
-}
-.organisasi-title{
+  }
+  .organisasi-title {
     border-radius: 32px;
     background: rgba(255, 255, 255, 0.8);
-}
-
-.organisasi-image{
+  }
+  
+  .organisasi-image {
     width: 100rem;
-}
-
-.sensus-penduduk{
-    background: #98FB98;
-}
-
-.visi-misi{
-    background: #F0E8EB;
-}
+  }
+  
+  .sensus-penduduk {
+    background: #98fb98;
+  }
+  
+  .visi-misi {
+    background: #f0e8eb;
+  }
+  /* End Profile Desa */

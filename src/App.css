@@ -3,284 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* Article*/
-
-.artikel-container h2{
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.card-article {
-  flex-direction: row;
-  width: auto;
-}
-.card-image {
-  border-top-right-radius: 0;
-  border-bottom-left-radius: calc(0.25rem - 1px);
-  width: 30%;
-}
-
-.artikel-wrapper {
-  background: #f0e8eb;
-}
-
-.artikel-more-btn{
-  max-width: fit-content;
-  border-radius: 32px;
-  text-align: center;
-}
-
-.card-title {
-  font-weight: bold;
-}
-
-.artikel-container{
-  max-width: 700px;
-}
-.artikel-image{
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-}
-.artikelCard-wrapper{
-  flex-direction: row;
-  width: inherit;
-}
-@media only screen and (max-width: 768px) {
-  a {
-    display: none;
-  }
-  .card-body {
-    padding: 0.5em 1.2em;
-  }
-  .card-body .card-text {
-    margin: 0;
-  }
-  .card img {
-    width: 50%;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .card img {
-    width: 40%;
-  }
-}
-/* End Article */
-
-/* Beranda */
-.beranda {
-  padding-top: 150px;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  background: rgb(54, 54, 54);
-  background: linear-gradient(
-    1deg,
-    rgba(54, 54, 54, 1) 0%,
-    rgba(159, 159, 159, 1) 100%
-  );
-}
-.profile-image {
-  width: 300px;
-  height: 400px;
-}
-.desc {
-  text-align: justify;
-}
-
-.link-more {
-  text-align: start !important;
-}
-/* End Beranda */
-
-/* Carousel */
-.carousel-item img {
-  max-width: 100%;
-  height: 100vh;
-}
-.carousel {
-  margin-top: -90px;
-  overflow: hidden;
-}
-/* End Carousel */
-
-/* Event */
-.event-title{
-  text-transform: uppercase;
-  font-weight: bold;
-  
-}
-.event-title::after{
-  content: '';
-  display: block;
-  width: 150px;
-  margin: auto;
-  margin-top: 10px;
-  border-bottom: 3px solid #045E18;
-}
-
-
-.event-image {
-  max-width: 150px;
-}
-
-.event-card {
-  max-width: 345px;
-  max-height: fit-content;
-  padding: 10px;
-  text-align: justify;
-  border-radius: 5px;
-background: linear-gradient(315deg, #dddddd, #ffffff);
-box-shadow:  -18px -18px 36px #e4e4e4,
-             18px 18px 36px #ffffff;
-}
-
-.event-wrapper {
-  width: 100%;
-}
-
-.event-more-btn{
-  max-width: fit-content;
-  border-radius: 32px;
-  text-align: center;
-}
-/* End Event */
-
-/* Footer */
-
-/* End Footer */
-
-/* Header / Navbar */
-nav{
-  height: 90px;
-}
-.nav-link {
-  word-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 500;
-  padding-bottom: 1px;
-  white-space: nowrap;
-  color: whitesmoke !important;
-}
-
-.nav-link:hover {
-  padding-bottom: 1px;
-  border-bottom: 2px solid green;
-}
-
-.navbar-brand {
-  word-spacing: 5px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: whitesmoke;
-}
-.nabar-brand:hover{
-  font-weight: 500;
-  color: whitesmoke !important;
-}
-.navbar-brand img{
-  width: 50px;
-}
-
-.active {
-  border-bottom: 2px solid green;
-  white-space: nowrap;
-}
-
-img {
-  width: 10%;
-  height: 10%;
-}
-
-/* End Header / End Navbar */
-
-/* Profile Desa */
-.organisasi-wrapper {
-  background: #98fb98;
-  max-width: 100%;
-}
-.profile-wrapper {
-  overflow-x: hidden;
-}
-.visi-misi-box {
-  background: #ffffff;
-  width: 60%;
-  border-radius: 32px;
-}
-.organisasi-title {
-  border-radius: 32px;
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.organisasi-image {
-  width: 100rem;
-}
-
-.sensus-penduduk {
-  background: #98fb98;
-}
-
-.visi-misi {
-  background: #f0e8eb;
-}
-/* End Profile Desa */
-
-/* UMKM */
-.umkm-container{
-  max-width: 100%;
-}
-.umkm-image{
-  width: 200px;
-  /* aspect-ratio: 1/3;*/
-  height: 200px;
-  object-fit: contain;
-}
-.umkmCard-wrapper{
-  box-shadow: 2px 4px  2px rgba(0, 0, 0, .25);
-  border-radius: 20px;
-  flex-direction: row;
-  background-color: #F0E8EB;
-}
-.umkmCard-body{
-  border-radius: 20px;
-  background-color: #fff;
-}
-/* End UMKM */
-
-
-/* Topografi */
-.topografi {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  margin-top: 0 !important;
-  background: #F0E8EB;
-}
-
-iframe {
-  border: 0;
-}
-
-.topografi-icons{
-  font-size: 4rem;
-}
-
-.topografi-title{
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.topografi-col-wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.topografi-container h4, h5{
-  font-size: 35px;
-  font-weight: bold;
-}
-/* End Topografi */
-
 /* Pagination */
 .button-pagination{
   margin: 10px    5px ;
@@ -288,3 +10,24 @@ iframe {
   background-color: whitesmoke;
 }
 /* End Pagination */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+/* Topografi */
+.topografi {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 0 !important;
+    background: #F0E8EB;
+  }
+  
+  iframe {
+    border: 0;
+  }
+  
+  .topografi-icons{
+    font-size: 4rem;
+  }
+  
+  .topografi-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .topografi-col-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .topografi-container h4, h5{
+    font-size: 35px;
+    font-weight: bold;
+  }
+  /* End Topografi */

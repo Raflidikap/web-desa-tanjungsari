@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink} from 'react-router-dom';
+import '../style/header.css'
 
 
 const header = () => {
@@ -12,7 +13,6 @@ const header = () => {
     return (
 
       <Navbar bg="light" expand="lg" className='bg-body-tertiary sticky-top'>
-      
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
         <Container>
@@ -37,10 +37,6 @@ const header = () => {
             <NavLink to='/umkm'
             className={({isActive})=> (isActive ? activeLink : normalLink)}>
             UMKM
-            </NavLink>
-            <NavLink to='/other'
-            className={({isActive})=> (isActive ? activeLink : normalLink)}>
-            Pengajuan Surat
             </NavLink>
           </Nav>
         </Navbar.Collapse>

@@ -3,15 +3,16 @@ import Pagination from './Pagination';
 import React from 'react'
 import { useState} from 'react';
 import logo from '../assets/logo-kabupaten.png'
+import '../style/event.css'
 
 const Event=()=>{
     const [events] = useState([
-        {title: '1', body:'lorem',category:'Admin, 12 April 2023', id:1},
-        {title: '2', body:'lorem',category:'Admin, 12 April 2023', id:2},
-        {title: '3', body:'lorem',category:'Admin, 12 April 2023', id:3},
-        {title: '4', body:'lorem',category:'Admin, 12 April 2023', id:4},
-        {title: '5', body:'lorem',category:'Admin, 12 April 2023', id:5},
-        {title: '6', body:'lorem',category:'Admin, 12 April 2023', id:6},
+        {title: 'lorem Ipsum 1', body:'lorem',category:'Admin, 12 April 2023', id:1},
+        {title: 'lorem Ipsum 2', body:'lorem',category:'Admin, 12 April 2023', id:2},
+        {title: 'lorem Ipsum 3', body:'lorem',category:'Admin, 12 April 2023', id:3},
+        {title: 'lorem Ipsum 4', body:'lorem',category:'Admin, 12 April 2023', id:4},
+        {title: 'lorem Ipsum 5', body:'lorem',category:'Admin, 12 April 2023', id:5},
+        {title: 'lorem Ipsum 6', body:'lorem',category:'Admin, 12 April 2023', id:6},
     ]);
     const [currentPage, setCurrentPage] =useState(1)
     const [eventPerPage] = useState(3)
@@ -31,9 +32,6 @@ const Event=()=>{
                         {event.category}
                     </Card.Text>
                     <Card.Title>{event.title}</Card.Title>
-                    <Card.Text>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, voluptatum assumenda mollitia temporibus nam blanditiis illo. Ut, pariatur odit? Nemo accusamus iure, aliquid magni ipsum eum culpa quas placeat quam?
-                    </Card.Text>
                 </Card.Body>
             </Card>
                 </Col>

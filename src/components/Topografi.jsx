@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import * as icons from "react-bootstrap-icons";
+import '../style/topografi.css'
 
 const Penduduk = () => {
   return (

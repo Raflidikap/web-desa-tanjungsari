@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {Card, Row, Col, Container, Button } from 'react-bootstrap'
 import Pagination from "./Pagination";
 import logo from "../assets/logo-kabupaten.png";
-import '../style/umkm.css'
+import '../style/artikel.css'
 
 const UMKM=()=>{
     const [umkms] = useState([
