@@ -35,6 +35,12 @@
 .created-by{
     text-align: end;
 }
+.utils-postingan{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
 
 @media only screen and (min-width: 1200px) {
     .utils-postingan{
@@ -54,5 +60,9 @@
 @media only screen and (max-width: 768px) {
     .created-by{
         text-align: end;
+    }
+    .postingan-image{
+        height: 200px;
+        width: 100%;
     }
 }
