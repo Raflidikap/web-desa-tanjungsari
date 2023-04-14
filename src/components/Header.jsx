@@ -19,7 +19,7 @@ const header = () => {
           <Navbar.Brand href="#" className="ms-5">
             <img
               src={logo_desa}
-              className="d-inline-block align-text-left me-4 ms-5"
+              className="d-inline-block align-text-left me-4 ms-5 logo"
               alt="desa tanjungsari"
             />
             Desa Tanjungsari

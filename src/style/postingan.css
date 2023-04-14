@@ -1,0 +1,58 @@
+.postingan-title-section{
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.postingan-title-section::after{
+    content: '';
+    display: block;
+    width: 150px;
+    margin: auto;
+    margin-top: 10px;
+    border-bottom: 5px solid #045E18;
+}
+.image-postingan-wrapper{
+    margin-bottom: 50px;
+}
+.postingan-image{
+    width: 500px;
+    height: 250px;
+}
+.postingan-title{
+    text-transform: uppercase;
+    color: #045E18;
+    font-size: 36px;
+    font-weight: 500;
+}
+.postingan-text{
+    text-align: justify;
+    font-size: 18px;
+}
+.created-time, .created-by{
+    font-size: 16px;
+    color: #999999;
+}
+.created-by{
+    text-align: end;
+}
+
+@media only screen and (min-width: 1200px) {
+    .utils-postingan{
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .created-by{
+        text-align: center;
+    }
+    .utils-postingan{
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .created-by{
+        text-align: end;
+    }
+}

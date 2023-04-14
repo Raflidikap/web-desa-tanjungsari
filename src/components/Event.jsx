@@ -1,4 +1,4 @@
-import {Card, Row, Container, Button, Col}from 'react-bootstrap';
+import {Card, Row, Container, Col}from 'react-bootstrap';
 import Pagination from './Pagination';
 import React from 'react'
 import { useState} from 'react';
@@ -49,10 +49,6 @@ const Event=()=>{
             <div className="pagination-button text-center">
                 <Pagination eventLength={events.length} eventPerPage={eventPerPage} setCurrentPage={setCurrentPage}/>
             </div>
-            <div className='justify-content-center d-flex p-4'>
-                <Button variant='primary' className='text-center event-more-btn pe-4 ps-4'> Muat Lebih Banyak Acara</Button>
-            </div>
-            
         </Container>
         </div>
         
