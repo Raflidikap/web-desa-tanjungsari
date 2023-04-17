@@ -48,7 +48,7 @@ const Artikel = () => {
           <Row className="pt-5">
             <ArtikelCard />
           </Row>
-          <div className="pagination-button text-center">
+          <div className="pagination-button text-center paginationArtikel-btn">
             <Pagination
               eventLength={artikels.length}
               eventPerPage={artikelPerPage}

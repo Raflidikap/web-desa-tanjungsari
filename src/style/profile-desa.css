@@ -1,5 +1,5 @@
 /* Profile Desa */
-.organisasi-wrapper {
+/* .organisasi-wrapper {
     background: #98fb98;
     max-width: 100%;
   }
@@ -26,5 +26,75 @@
   
   .visi-misi {
     background: #f0e8eb;
+  } */
+.desaDescriptionContainer {
+  background-color: #ccdbcc;
+}
+.desaDescriptionTitle::after {
+  content: "";
+  display: block;
+  width: 210px;
+  margin-top: 10px;
+  border-bottom: 3px solid #045e18;
+}
+
+.desaDescriptionParagraph {
+  font-size: 24;
+  text-align: justify;
+}
+
+/* .pemerintahanDescriptionContainer{
+
+  } */
+
+.pemerintahanTitle {
+  font-size: 36px;
+  text-align: right;
+}
+.kepalaDesaTitle {
+  font-size: 32px;
+}
+
+.kepalaDesaParagraph {
+  text-align: justify;
+}
+
+.baganAlt {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.visiDanMisiContainer {
+  background: #d9d9d9;
+}
+
+.visiDanMisiRow p {
+  text-align: justify;
+}
+
+@media only screen and (max-width: 768px) {
+  .kepalaDesaRow,
+  .desaDescriptionRow {
+    padding: 0;
+    margin: 0;
   }
-  /* End Profile Desa */
+  .pemerintahanTitle {
+    font-size: 26px;
+    text-align: right;
+  }
+  .kepalaDesaTitle {
+    font-size: 24px;
+  }
+  .baganAlt {
+    font-size: 16px;
+  }
+
+  .desaDescriptionTitle::after {
+    content: "";
+    display: block;
+    width: 75%;
+    margin-top: 10px;
+    border-bottom: 3px solid #045e18;
+  }
+}
+/* End Profile Desa */

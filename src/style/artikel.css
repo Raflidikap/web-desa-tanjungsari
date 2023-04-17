@@ -25,6 +25,7 @@
 
 .artikelWrapper {
   background: #CCDBCC;
+  position: relative;
 }
 
 .card-title {
@@ -45,7 +46,12 @@
   width: 550px;
   border-radius: 5px;
 }
-@media only screen and (max-width: 768px) {
+
+.artikelCardTitle{
+  height: 35px;
+}
+
+@media only screen and (max-width: 500px) {
   a {
     display: none;
   }
@@ -54,9 +60,17 @@
   }
   .card-body .card-text {
     margin: 0;
+    font-size: small;
+  }
+
+  .artikelCardTitle{
+    font-size: smaller;
+  }
+  .artikelCardAuthor{
+    font-size: smaller;
   }
   .card img {
-    width: 35%;
+    width: 25%;
   }
   .artikelTitleWrapper::after{
     content: '';
@@ -68,19 +82,25 @@
 }
 @media only screen and (max-width: 1200px) {
   .card img {
-    width: 25%;
+    width: 20%;
+  }
+
+  .artikelImage{
+    height: 100px;
   }
   .artikelCardWrapper{
-    width: 85%;
+    width: 100%;
+    height: 200px;
+  }
+  .artikelCardParagraph::after{
+    content: '';
+    display: block;
+    width: auto;
+    margin: auto;
+    margin-top: 10px;
+    border-bottom: 3px solid #045E18;
   }
 }
 
-.artikelCardParagraph::after{
-  content: '';
-  display: block;
-  width: auto;
-  margin: auto;
-  margin-top: 10px;
-  border-bottom: 3px solid #045E18;
-}
+
 /* End Article */
