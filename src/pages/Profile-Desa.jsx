@@ -46,10 +46,10 @@ const Profile = () => {
       </div>
 
       <div className="pemerintahanDescriptionContainer p-4">
+        <Container>
         <h3 className="pemerintahanTitle mb-4">
           Struktur Pemerintahan Desa Tanjungsari
         </h3>
-        <Container>
           <Row className="p-5 ms-4 me-4 kepalaDesaRow">
             <Col sm={8}>
               <h3 className="kepalaDesaTitle">Kepala Desa</h3>
@@ -84,7 +84,7 @@ const Profile = () => {
           </p>
         </div>
       </div>
-      <div className="visiDanMisiContainer pt-4">
+      <div className="visiDanMisiContainer p-4">
         <Row className="visiDanMisiRow">
           <Col md={6}>
             <h3 className="text-center visiContainer">Visi Desa Tanjungsari</h3>

@@ -20,6 +20,7 @@
 .videoFrame{
     width: 700px;
     height: 340px;
+    border:0;
 }
 
 @media only screen and (max-width: 770px){
