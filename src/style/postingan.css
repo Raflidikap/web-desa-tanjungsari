@@ -11,6 +11,10 @@
     margin-top: 10px;
     border-bottom: 5px solid #045E18;
 }
+.postingan-wrapper{
+    display: flex;
+}
+
 .image-postingan-wrapper{
     margin-bottom: 50px;
 }
@@ -42,7 +46,10 @@
 }
 
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
+    .postingan-wrapper{
+        flex-direction: column;
+    }
     .utils-postingan{
         margin-bottom: 50px;
     }

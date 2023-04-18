@@ -3,6 +3,7 @@ import img from "../assets/pemandangan.jpg";
 import { Container } from "react-bootstrap"
 import Pagination from "./Pagination";
 import '../style/UmkmCard.css'
+
 const UmkmCard = () =>{
     const [umkms] = useState([
         {title: 'Hakiki Collection', body:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit error provident quo mollitia sed ea ratione ipsa dolore deserunt nisi id deleniti doloremque odit pariatur, repudiandae nobis eveniet voluptatem dolorum sapiente amet magni enim fuga.', author:'Admin', date:'20 April 2023', id:1},

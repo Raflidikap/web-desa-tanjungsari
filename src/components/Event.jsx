@@ -25,7 +25,7 @@ const Event=()=>{
         return currentevents.map((event, i)=>{
             return(
                 <Col key={i} md="4" className=''>
-                <Card className='event-card m-3' me-4 >
+                <Card className='event-card mt-3 mb-3'>
                 <Card.Img variant="top" src={logo} className="event-image mx-auto img-thumbnail"/>
                 <Card.Body className='p-4'>
                     <Card.Text>

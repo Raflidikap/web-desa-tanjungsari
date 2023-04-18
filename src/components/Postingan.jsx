@@ -27,8 +27,8 @@ const Postingan=()=>{
                 <h1 className="text-center mb-5 mt-5 postingan-title-section">POSTINGAN</h1>
                 <Row className="justify-content-center">
                     {currentposts.map((p, index) =>(
-                        <>
-                            <Col xl="6" key={index} className="image-postingan-wrapper">
+                        <div key={index} className="postingan-wrapper">
+                            <Col xl="6"  className="image-postingan-wrapper">
                                 <img className="postingan-image" src={logo} alt="" />
                             </Col>
                             <Col xl="6">
@@ -39,7 +39,7 @@ const Postingan=()=>{
                                     <p className="created-by">{p.author}</p>
                                 </div>
                             </Col>
-                        </>                        
+                        </div>                        
                     ))}
                 </Row>
                 <div className="pagination-button text-center">

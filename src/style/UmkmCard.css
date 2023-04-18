@@ -23,7 +23,7 @@
     margin-bottom: 50px;
 }
 .umkmImage-wrapper{
-    width: 40%;
+    width: 100%;
 }
 .umkmImage-wrapper img{
     border-radius: 20px 0 0 20px;
@@ -47,6 +47,9 @@
 }
 
 @media only screen and (max-width: 992px) {
+    .umkmCard-wrapper{
+        flex-direction:column !important;
+    }
     .umkmImage-wrapper{
         width: 100%;
     }
@@ -55,10 +58,8 @@
         border-radius: 0;
     }
 }
-@media only screen and (max-width: 760px){
-    .umkmCard-wrapper{
-        display: flex;
-        flex-direction: column;
-        
+@media  screen and (min-width: 1200px) {
+    .umkmImage-wrapper{
+        width: 60%;
     }
 }

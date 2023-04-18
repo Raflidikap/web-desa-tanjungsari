@@ -24,7 +24,7 @@ const Artikel = () => {
     return currentartikels.map((artikel, i) => {
       return (
         <Col key={i} md="6" className="pb-4">
-          <Card className="p-4 d-flex artikelCardWrapper" me-4>
+          <Card className="p-4 d-flex artikelCardWrapper me-4">
             <Card.Img
               variant="start"
               src={logo}

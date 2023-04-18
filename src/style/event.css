@@ -20,7 +20,6 @@
 }
 
 .event-card {
-  max-width: 345px;
   max-height: fit-content;
   padding: 10px;
   text-align: justify;

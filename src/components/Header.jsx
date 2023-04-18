@@ -8,14 +8,14 @@ import '../style/header.css'
 
 
 const header = () => {
-  const activeLink = 'me-4 nav-link active'
+  const activeLink = 'me-4 nav-link actives'
   const normalLink = 'me-4 nav-link'
     return (
 
       <Navbar bg="light" expand="lg" className='bg-body-tertiary sticky-top'>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-        <Container>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-responsive-button"/>
+        <Navbar.Collapse id="basic-navbar-nav" className="navbar-responsive-body">
+        <Container className="navbarBrand-container">
           <Navbar.Brand href="#" className="ms-5">
             <img
               src={logo_desa}
