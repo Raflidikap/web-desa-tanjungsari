@@ -1,18 +1,20 @@
-import React, { useState } from "react";
-import {Card, Row, Col, Container } from 'react-bootstrap'
-import logo from "../assets/logo-kabupaten.png";
+// import React, { useState } from "react";
+// import {Card, Row, Col, Container } from 'react-bootstrap'
+// import logo from "../assets/logo-kabupaten.png";
 import '../style/umkm.css'
+import React from 'react';
+import DetailUMKM from "./UmkmDetail";
 
 const UMKM=()=>{
-    const [umkms] = useState([
-        {title: 'Hakiki Collection', body:'lorem',category:'Sepatu', id:1},
-        {title: 'Kayu Haji ..', body:'lorem',category:'Kayu', id:2},
-        {title: 'Konveksi Deni Dhafir', body:'lorem',category:'Tas', id:3}
-    ]);
+    // const [umkms] = useState([
+    //     {title: 'Hakiki Collection', body:'lorem',category:'Sepatu', id:1},
+    //     {title: 'Kayu Haji ..', body:'lorem',category:'Kayu', id:2},
+    //     {title: 'Konveksi Deni Dhafir', body:'lorem',category:'Tas', id:3}
+    // ]);
 
     return(
         <>
-        <Container className="umkm-container mb-5">
+        {/* <Container className="umkm-container mb-5">
             <Row className='justify-content-center mt-5'>
                 {umkms.map((item, i) =>(
                     <Col key={i} xl="12"  className='pb-4 g-5'>
@@ -27,7 +29,8 @@ const UMKM=()=>{
                     </Col>
                 ))}          
             </Row> 
-        </Container>
+        </Container> */}
+        <DetailUMKM/>
         </>
     );
 }
