@@ -12,7 +12,12 @@
 /* End Pagination */
 
 
-
+/* Modals */
+.modal-90w{
+  width: 70%;
+  max-width: none !important;
+}
+/* End Modals */
 
 
 

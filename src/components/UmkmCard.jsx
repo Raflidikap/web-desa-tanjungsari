@@ -3,8 +3,12 @@ import img from "../assets/pemandangan.jpg";
 import { Container } from "react-bootstrap"
 import Pagination from "./Pagination";
 import '../style/UmkmCard.css'
+import { getUmkmList } from "../api";
+
 
 const UmkmCard = () =>{
+    const [umkm, setumkm] = useState([])
+
     const [umkms] = useState([
         {title: 'Hakiki Collection', body:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit error provident quo mollitia sed ea ratione ipsa dolore deserunt nisi id deleniti doloremque odit pariatur, repudiandae nobis eveniet voluptatem dolorum sapiente amet magni enim fuga.', author:'Admin', date:'20 April 2023', id:1},
         {title: 'Kayu Haji ..', body:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit error provident quo mollitia sed ea ratione ipsa dolore deserunt nisi id deleniti doloremque odit pariatur, repudiandae nobis eveniet voluptatem dolorum sapiente amet magni enim fuga.', author:'Admin', date:'20 April 2023', id:2},
@@ -18,9 +22,18 @@ const UmkmCard = () =>{
     const firstumkms = lastumkms - umkmPerPage
     const currentUmkms = umkms.slice(firstumkms, lastumkms)
 
+    
+
     useEffect(()=>{
         if(umkms.length > umkmPerPage) setIsShow(true)
+        
+        getUmkmList().then((result) =>{
+            setumkm(result)
+        })
+        console.log(umkm)
     }, [isShow])
+
+    
 
     return(
         <>

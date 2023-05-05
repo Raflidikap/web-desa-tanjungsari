@@ -1,4 +1,4 @@
-import {Card, Row, Container, Col}from 'react-bootstrap';
+import {Card, Row, Container, Col, Button}from 'react-bootstrap';
 import Pagination from './Pagination';
 import React from 'react'
 import { useState} from 'react';
@@ -17,6 +17,7 @@ const Event=()=>{
     const [currentPage, setCurrentPage] =useState(1)
     const [eventPerPage] = useState(3)
 
+
     const lastevents = currentPage * eventPerPage
     const firstevents = lastevents - eventPerPage
     const currentevents = events.slice(firstevents, lastevents)
@@ -33,6 +34,7 @@ const Event=()=>{
                     </Card.Text>
                     <Card.Title>{event.title}</Card.Title>
                 </Card.Body>
+                <Button>Click Me!</Button>
             </Card>
                 </Col>
             

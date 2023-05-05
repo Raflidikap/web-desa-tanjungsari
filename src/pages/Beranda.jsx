@@ -7,6 +7,10 @@ import Postingan from '../components/Postingan'
 import UmkmCard from '../components/UmkmCard'
 
 const beranda=()=>{
+    
+    
+
+
     return(
         <>
         <Carousel/>

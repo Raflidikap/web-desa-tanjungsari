@@ -27,7 +27,7 @@ const CarouselS = () => {
               alt=""
             />
             <Carousel.Caption>
-              <h3>{review.author}</h3>
+              <h1>Selamat Datang di Website Desa Tanjungsari</h1>
               <p>{review.content}</p>
             </Carousel.Caption>
           </Carousel.Item>

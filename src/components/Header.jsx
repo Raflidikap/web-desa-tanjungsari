@@ -13,9 +13,9 @@ const header = () => {
     return (
 
       <Navbar bg="light" expand="lg" className='bg-body-tertiary sticky-top'>
+        <Container className="navbarBrand-container">
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-responsive-button"/>
         <Navbar.Collapse id="basic-navbar-nav" className="navbar-responsive-body">
-        <Container className="navbarBrand-container">
           <Navbar.Brand href="#" className="ms-5">
             <img
               src={logo_desa}
@@ -24,8 +24,7 @@ const header = () => {
             />
             Desa Tanjungsari
           </Navbar.Brand>
-        </Container>
-          <Nav className="mx-auto">
+          <Nav className="ms-auto">
             <NavLink to='/'
             className={({isActive})=> (isActive ? activeLink : normalLink)}>
             Beranda
@@ -34,13 +33,13 @@ const header = () => {
             className={({isActive})=> (isActive ? activeLink : normalLink)}>
             Tentang Desa
             </NavLink>
-            <NavLink to='/umkm'
+            <NavLink to='#umkm'
             className={({isActive})=> (isActive ? activeLink : normalLink)}>
             UMKM
             </NavLink>
           </Nav>
-        </Navbar.Collapse>
-      
+        </Navbar.Collapse>    
+        </Container> 
     </Navbar>
     )
 }
