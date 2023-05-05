@@ -38,6 +38,11 @@
 .umkmDeskripsi-wrapper p{
     margin-top: 50px;
     font-size: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .umkmDeskripsi-wrapper h3{
     font-size: 32px;
