@@ -1,5 +1,5 @@
-export const getUmkmList = async () =>{
-    const umkms = await fetch(`${process.env.REACT_APP_BASEURL}umkm?page=1&limit=3`)
+export const getUmkmList = async (page, limit) =>{
+    const umkms = await fetch(`${process.env.REACT_APP_BASEURL}umkm?page=${page}&limit=${limit}`)
     .then(res=>res.json())
     return umkms
 }

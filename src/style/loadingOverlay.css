@@ -1,0 +1,16 @@
+/**
+  * Dots
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+.loading{
+    width: 100%;
+    position: relative;
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight: 600;
+}
