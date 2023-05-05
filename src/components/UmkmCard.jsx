@@ -11,12 +11,8 @@ const UmkmCard = () =>{
     console.log(umkm)
     const [isShow, setIsShow] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
-    const umkmPerPage = 1
-    const [page, setPage] = useState(1)
-    console.log(page)
-    
-
-    
+    const umkmPerPage = 3
+    const [page, setPage] = useState(1)    
 
     useEffect(()=>{
         setIsLoading(true)    
@@ -27,8 +23,6 @@ const UmkmCard = () =>{
             setIsLoading(false)
         })
     }, [isShow, page])
-
-    
 
     return(
         <>
