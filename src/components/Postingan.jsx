@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {Row, Col, Container} from 'react-bootstrap'
 import Pagination from "./Pagination";
 import logo from "../assets/pemandangan.jpg";
 import '../style/postingan.css'
+import { getPostList } from "../api";
 
 const Postingan=()=>{
+    const [post, setpost] = useState([])
+
     const [posts] = useState([
         {title: 'Hakiki Collection', body:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit error provident quo mollitia sed ea ratione ipsa dolore deserunt nisi id deleniti doloremque odit pariatur, repudiandae nobis eveniet voluptatem dolorum sapiente amet magni enim fuga.', author:'Admin', date:'20 April 2023', id:1},
         {title: 'Kayu Haji ..', body:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit error provident quo mollitia sed ea ratione ipsa dolore deserunt nisi id deleniti doloremque odit pariatur, repudiandae nobis eveniet voluptatem dolorum sapiente amet magni enim fuga.', author:'Admin', date:'20 April 2023', id:2},
@@ -20,7 +23,13 @@ const Postingan=()=>{
     const firstposts = lastposts - postPerPage
     const currentposts = posts.slice(firstposts, lastposts)
 
-    
+    useEffect(()=>{
+        getPostList().then((result) =>{
+            setpost(result)
+        })
+        console.log(post)
+    }, [])
+
     return(
         <>
             <Container className="postingan-container">

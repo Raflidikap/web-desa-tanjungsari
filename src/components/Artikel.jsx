@@ -1,39 +1,51 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Card, Row, Col, Container } from "react-bootstrap";
 import Pagination from "./Pagination";
-import logo from "../assets/logo-kabupaten.png";
 import "../style/artikel.css";
+import axios from "axios";
 
 const Artikel = () => {
-  const [artikels] = useState([
-    { title: "Hakiki Collection", body: "lorem", author: "Admin, 4 Agustus 2023", id: 1, paragraph:"lorem ipsum dolor sit amet."},
-    { title: "Kayu Haji ..", body: "lorem", author: "Admin, 4 Agustus 2023", id: 2, paragraph:"lorem ipsum dolor sit amet." },
-    { title: "Konveksi Deni Dhafir", body: "lorem", author: "Admin, 4 Agustus 2023", id: 3, paragraph:"lorem ipsum dolor sit amet." },
-    { title: "Hakiki Collection 2", body: "lorem", author: "Admin, 4 Agustus 2023", id: 4, paragraph:"lorem ipsum dolor sit amet." },
-    { title: "Kayu Haji 2", body: "lorem", author: "Admin, 4 Agustus 2023", id: 5, paragraph:"lorem ipsum dolor sit amet." },
-    { title: "Konveksi Deni Dhafir 2", body: "lorem", author: "Admin, 4 Agustus 2023", id: 6, paragraph:"lorem ipsum dolor sit amet." },
-  ]);
+  const[artikel, setArtikel] = useState([])
+
   const [currentPage, setCurrentPage] = useState(1);
   const [artikelPerPage] = useState(4);
 
   const lastartikels = currentPage * artikelPerPage;
   const firstartikels = lastartikels - artikelPerPage;
-  const currentartikels = artikels.slice(firstartikels, lastartikels);
+  const currentartikels = artikel.slice(firstartikels, lastartikels);
+
+
+  useEffect(()=>{
+    axios.post('https://joyous-pink-catfish.cyclic.app/posts/search?page=1&limit=1', {
+    category: 'article',
+    })
+    .then( (response) =>{
+      setArtikel(response.data.docs);
+    })
+    .catch( (error) =>{
+      console.log(error);
+    });
+  }, [])
+
 
   const ArtikelCard = () => {
+
+    
     return currentartikels.map((artikel, i) => {
       return (
         <Col key={i} md="6" className="pb-4">
           <Card className="p-4 d-flex artikelCardWrapper me-4">
             <Card.Img
               variant="start"
-              src={logo}
+              src={artikel.image}
               className="artikelImage"
             />
             <Card.Body className="p-4">
-              <Card.Text className="artikelCardAuthor">{artikel.author}</Card.Text>
-              <Card.Title className="artikelCardTitle">{artikel.title}</Card.Title>
-              <Card.Text className="artikelCardParagraph">{artikel.paragraph}</Card.Text>
+              <Card.Text className="artikelCardAuthor">{artikel.name}</Card.Text>
+              <Card.Title className="artikelCardTitle">{artikel.name}</Card.Title>
+              <Card.Text className="artikelCardParagraph">
+                <span dangerouslySetInnerHTML={{ __html: artikel.description }}></span>
+              </Card.Text>
             </Card.Body>
           </Card>
         </Col>
@@ -50,7 +62,7 @@ const Artikel = () => {
           </Row>
           <div className="pagination-button text-center paginationArtikel-btn">
             <Pagination
-              eventLength={artikels.length}
+              eventLength={artikel.length}
               eventPerPage={artikelPerPage}
               setCurrentPage={setCurrentPage}
             ></Pagination>

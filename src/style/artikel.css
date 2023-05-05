@@ -46,6 +46,13 @@
   width: 550px;
   border-radius: 5px;
 }
+.artikelCardParagraph{
+  display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 .artikelCardTitle{
   height: 35px;
