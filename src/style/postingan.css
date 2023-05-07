@@ -31,6 +31,11 @@
 .postingan-text{
     text-align: justify;
     font-size: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .created-time, .created-by{
     font-size: 16px;

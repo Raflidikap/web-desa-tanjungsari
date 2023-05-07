@@ -9,7 +9,7 @@
 .artikelTitleWrapper::after{
   content: '';
   display: block;
-  width: 500px;
+  width: 200px;
   margin-top: 10px;
   border-bottom: 3px solid #045E18;
 }

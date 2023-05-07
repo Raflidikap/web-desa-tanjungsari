@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import {Row, Col, Container} from 'react-bootstrap'
 import Pagination from "./Pagination";
-import logo from "../assets/pemandangan.jpg";
+// import logo from "../assets/pemandangan.jpg";
 import '../style/postingan.css'
-import { getPostList } from "../api";
+// import { getPostList } from "../api";
+import axios from "axios";
 
 const Postingan=()=>{
     const [post, setpost] = useState([])
@@ -21,31 +22,43 @@ const Postingan=()=>{
 
     const lastposts = currentPage * postPerPage
     const firstposts = lastposts - postPerPage
-    const currentposts = posts.slice(firstposts, lastposts)
+    const currentposts = post.slice(firstposts, lastposts)
+
+    // useEffect(()=>{
+    //     getPostList().then((result) =>{
+    //         setpost(result)
+    //     })
+    //     console.log(post)
+    // }, [])
 
     useEffect(()=>{
-        getPostList().then((result) =>{
-            setpost(result)
+        axios.post('https://joyous-pink-catfish.cyclic.app/posts/search?page=1&limit=1', {
+        category: 'post',
         })
-        console.log(post)
-    }, [])
+        .then( (response) =>{
+          setpost(response.data.docs);
+        })
+        .catch( (error) =>{
+            console.log(error);
+        });
+      }, [])
 
     return(
         <>
             <Container className="postingan-container">
-                <h1 className="text-center mb-5 mt-5 postingan-title-section">POSTINGAN</h1>
+                <h1 className="text-center mb-5 mt-5 postingan-title-section">POST</h1>
                 <Row className="justify-content-center">
                     {currentposts.map((p, index) =>(
                         <div key={index} className="postingan-wrapper">
                             <Col xl="6"  className="image-postingan-wrapper">
-                                <img className="postingan-image" src={logo} alt="" />
+                                <img className="postingan-image" src={p.image} alt="" />
                             </Col>
                             <Col xl="6">
-                                <h3 className="postingan-title">{p.title}</h3>
-                                <p className="postingan-text">{p.body}</p>
+                                <h3 className="postingan-title">{p.name}</h3>
+                                <p className="postingan-text" dangerouslySetInnerHTML={{ __html: p.description }}></p>
                                 <div className="utils-postingan">
-                                    <p className="created-time">{p.date}</p>
-                                    <p className="created-by">{p.author}</p>
+                                    <p className="created-time">{p.createdAt}</p>
+                                    <p className="created-by">Admin</p>
                                 </div>
                             </Col>
                         </div>                        

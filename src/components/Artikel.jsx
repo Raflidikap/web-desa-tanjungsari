@@ -56,7 +56,7 @@ const Artikel = () => {
     <>
       <div className="artikelWrapper pt-5">
         <Container className="artikelContainer pt-5">
-          <h2 className="artikelTitleWrapper">Artikel Desa Tanjungsari</h2>
+          <h2 className="artikelTitleWrapper">Artikel</h2>
           <Row className="pt-5">
             <ArtikelCard />
           </Row>

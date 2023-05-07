@@ -8,7 +8,6 @@ import { getUmkmList } from "../api";
 
 const UmkmCard = () =>{
     const [umkm, setumkm] = useState([])
-    console.log(umkm)
     const [isShow, setIsShow] = useState(false)
     const [umkmPerPage] = useState(3)
 
