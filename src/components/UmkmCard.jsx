@@ -1,34 +1,35 @@
 import { useState, React, useEffect } from "react";
-// import img from "../assets/pemandangan.jpg";
 import { Container } from "react-bootstrap"
 import Pagination from "./Pagination";
 import '../style/UmkmCard.css'
+import '../style/loadingOverlay.css'
 import { getUmkmList } from "../api";
 
 
 const UmkmCard = () =>{
     const [umkm, setumkm] = useState([])
     const [isShow, setIsShow] = useState(false)
-    const [umkmPerPage] = useState(3)
-
-    
+    const [isLoading, setIsLoading] = useState(true)
+    const umkmPerPage = 3
+    const [page, setPage] = useState(1)    
 
     useEffect(()=>{
-        if(umkm?.docs?.length() > umkmPerPage) setIsShow(true)
-        
-        getUmkmList().then((result) =>{
+        setIsLoading(true)    
+        getUmkmList(page, umkmPerPage).then((result) =>{
             setumkm(result)
+            console.log(result.docs.length)
+            if(result?.docs?.length === umkmPerPage) setIsShow(true)
+            setIsLoading(false)
         })
-    }, [isShow])
-
-    
+    }, [isShow, page])
 
     return(
         <>
             <div className="umkm-section">
                 <Container className="pt-5 pb-5">
                     <h3 className="title-section">UMKM</h3>
-                    {umkm?.docs?.map((umkm, i)=>(
+                    { isLoading ? <div className="loading">Loading...
+    </div> :  umkm?.docs?.map((umkm, i)=>(
                         <div key={i} className="umkmCard-wrapper">
                             <div className="umkmImage-wrapper">
                                 <img src={umkm.image[0]} alt="" />
@@ -41,7 +42,7 @@ const UmkmCard = () =>{
                     ))}
                     {isShow ?
                     <div className="pagination-button text-center">
-                        <Pagination eventLength={umkm?.docs?.length()} eventPerPage={umkmPerPage} setCurrentPage={umkm?.page}/>
+                        <Pagination isLoading={isLoading} currentPage={page} setPage={(page) => setPage(page)} totalPages={umkm?.totalPages} eventLength={umkm?.docs?.length} eventPerPage={umkmPerPage} setCurrentPage={umkm?.page}/>
                     </div>
                     : ""
                 }
