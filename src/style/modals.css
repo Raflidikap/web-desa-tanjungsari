@@ -1,0 +1,18 @@
+.modalsImage{
+    height: 400px;
+    max-width: 400px;
+}
+
+
+@media only screen and (max-width: 1200px){
+    .modalsContent{
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 576px){
+    .modalsImage{
+        height: 300px;
+        width: 250px;
+    }
+}

@@ -14,9 +14,17 @@
 
 
 /* Modals */
-.modal-90w{
+.modal-70w{
   width: 70%;
   max-width: none !important;
+}
+
+@media only screen and (max-width: 576px){
+  .modal-70w{
+    width: 90%;
+    padding: 10px;
+    max-width: none !important;
+  }
 }
 /* End Modals */
 
