@@ -51,7 +51,7 @@ const Postingan=()=>{
                     {currentposts.map((p, index) =>(
                         <div key={index} className="postingan-wrapper">
                             <Col xl="6"  className="image-postingan-wrapper">
-                                <img className="postingan-image" src={p.image} alt="" />
+                                <img className="postingan-image fluid" src={p.image} alt="" />
                             </Col>
                             <Col xl="6">
                                 <h3 className="postingan-title">{p.name}</h3>

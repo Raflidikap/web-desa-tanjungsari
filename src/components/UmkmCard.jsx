@@ -17,7 +17,6 @@ const UmkmCard = () =>{
         setIsLoading(true)    
         getUmkmList(page, umkmPerPage).then((result) =>{
             setumkm(result)
-            console.log(result.docs.length)
             if(result?.docs?.length === umkmPerPage) setIsShow(true)
             setIsLoading(false)
         })
@@ -32,7 +31,7 @@ const UmkmCard = () =>{
     </div> :  umkm?.docs?.map((umkm, i)=>(
                         <div key={i} className="umkmCard-wrapper">
                             <div className="umkmImage-wrapper">
-                                <img src={umkm.image[0]} alt="" />
+                                <img className="umkmCardImage fluid" src={umkm.image[0]} alt="" />
                             </div>
                             <div className="umkmDeskripsi-wrapper">
                                 <h3>{umkm.name}</h3>
