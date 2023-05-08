@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Card, Row, Col, Container } from "react-bootstrap";
 import Pagination from "./Pagination";
 import "../style/artikel.css";
-import axios from "axios";
+import { getArticleList } from "../api";
 
 const Artikel = () => {
   const[artikel, setArtikel] = useState([])
@@ -16,9 +16,7 @@ const Artikel = () => {
 
 
   useEffect(()=>{
-    axios.post('https://joyous-pink-catfish.cyclic.app/posts/search?page=1&limit=1', {
-    category: 'article',
-    })
+    getArticleList()
     .then( (response) =>{
       setArtikel(response.data.docs);
     })

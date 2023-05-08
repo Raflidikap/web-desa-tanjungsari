@@ -33,7 +33,7 @@ const header = () => {
             className={({isActive})=> (isActive ? activeLink : normalLink)}>
             Tentang Desa
             </NavLink>
-            <NavLink to='#umkm'
+            <NavLink to='/umkm'
             className={({isActive})=> (isActive ? activeLink : normalLink)}>
             UMKM
             </NavLink>
