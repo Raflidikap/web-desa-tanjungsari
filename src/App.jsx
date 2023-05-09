@@ -4,8 +4,8 @@ import './App.css';
 import Beranda from "./pages/Beranda"
 import Header from './components/Header'
 import ProfileDesa from "./pages/Profile-Desa"
-import UMKM from "./pages/Umkm"
 import Footer from './components/Footer';
+import UMKMDetail from './pages/UmkmDetail'
 function App() {
   return (
     <div className="App">      
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Beranda/>} />
           <Route path="/profiledesa" element={<ProfileDesa/>} />
-          <Route path="/umkm" element={<UMKM/>} />
+          <Route path="/umkm/:id" element={<UMKMDetail/>} />
         </Routes>
       </Router>
       <Footer/>

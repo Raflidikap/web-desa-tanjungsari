@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Image, Container, Row, Col } from "react-bootstrap";
-import umkmImage from "../assets/landScapeImg.jpg";
 import logo from "../assets/logo-kabupaten.png";
 import * as icons from "react-bootstrap-icons";
 import "../style/umkmdetail.css";
+import { useParams } from "react-router-dom";
+import { getUmkmListById } from "../api";
 
 
 const images = [
@@ -26,50 +27,21 @@ const images = [
 ];
 
 const DetailUMKM = () => {
+      const [umkmDetail, setUmkmDetail] = useState([])
+      const {id} = useParams()
+      
+
+      getUmkmListById(id).then(res =>setUmkmDetail(res.data))
 
   return (
     <>
       <div className="detailUMKM">
-        <Image className="bigImageUmkm" fluid src={umkmImage}></Image>
+        <Image className="bigImageUmkm" fluid src={umkmDetail.image}></Image>
         <Container>
-          <h3 className="umkmTitle p-4 mt-5">UMKM</h3>
+          <h3 className="umkmTitle p-4 mt-5">{umkmDetail.name}</h3>
 
           <p className="umkmParagraph pt-2 ps-4 pb-4 pe-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-            adipisci nulla atque ratione excepturi ducimus hic blanditiis error
-            aliquid odit dolores eum exercitationem ab, eius asperiores nemo?
-            Libero, sed quos inventore voluptas quidem placeat quaerat dicta
-            eveniet doloremque hic aspernatur voluptate animi mollitia.
-            Veritatis inventore, corporis ipsa doloribus fugiat laborum possimus
-            non vitae facilis saepe soluta quaerat velit? Quod rem quibusdam
-            inventore qui, magni omnis! Tempora tempore aspernatur laudantium ab
-            ipsam esse vitae nemo modi maxime repellat incidunt blanditiis
-            labore, optio fugiat. Magni consequuntur aut fuga minima natus
-            placeat officiis porro sapiente explicabo, consectetur minus dolor
-            sed soluta beatae blanditiis eveniet mollitia deleniti. Facere
-            architecto minima deleniti id veniam laborum autem deserunt. Rem cum
-            sapiente tempora provident excepturi harum enim, repudiandae quos
-            aut dicta nemo odit nobis adipisci! Ipsam velit porro temporibus!
-            Est, explicabo, eligendi natus laboriosam reiciendis inventore quo
-            eum necessitatibus, nisi quos tempora. Ex quidem debitis porro
-            nostrum voluptatum, voluptatibus, quae accusantium veritatis
-            necessitatibus cum corrupti optio animi, laboriosam ipsam
-            perferendis facere quod asperiores iusto et ad eius. Totam iusto qui
-            voluptatibus nam quod quas deleniti ratione nisi doloribus nihil
-            illum placeat ad tempora a, molestiae, deserunt, voluptatum odio
-            unde consequuntur? Cum, architecto ex. Porro tempora sed in, magni
-            vero doloremque vitae reiciendis eum expedita illo deleniti
-            excepturi autem amet earum alias cum dolor quisquam ipsum, obcaecati
-            adipisci, iusto esse dolorum velit quod! Voluptas aut veniam
-            voluptatum quis, sunt iste vero deleniti doloribus tenetur, omnis
-            praesentium, recusandae ipsum autem! Reiciendis fuga quidem,
-            repudiandae numquam voluptatibus quia. Maxime, eum, mollitia neque
-            quos corrupti non magni eos aperiam deserunt in temporibus sint,
-            perferendis ab ad delectus modi voluptatibus fuga laborum! Natus
-            fugiat fuga expedita adipisci maiores consectetur aliquam
-            consequuntur ut, neque mollitia eveniet! Dolorum, repudiandae?
-            Molestiae mollitia nobis ipsam repellendus, nemo sit at quis dolorum
-            error. Laborum obcaecati beatae debitis?
+            {umkmDetail.description}
           </p>
 
           <h3 className="umkmGalleryTitle pt-5">Gallery</h3>
