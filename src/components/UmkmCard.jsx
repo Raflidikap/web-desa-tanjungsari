@@ -10,7 +10,7 @@ const UmkmCard = () =>{
     const [umkm, setumkm] = useState([])
     const [isShow, setIsShow] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
-    const umkmPerPage = 3
+    const umkmPerPage = 1
     const [page, setPage] = useState(1)    
 
     useEffect(()=>{
@@ -27,7 +27,7 @@ const UmkmCard = () =>{
             <div className="umkm-section">
                 <Container className="pt-5 pb-5">
                     <h3 className="title-section">UMKM</h3>
-                    { isLoading ? <div className="loading">Loading...
+                    { isLoading ? <div className="spinner">
     </div> :  umkm?.docs?.map((umkm, i)=>(
                         <div key={i} className="umkmCard-wrapper">
                             <div className="umkmImage-wrapper">

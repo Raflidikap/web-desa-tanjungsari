@@ -5,6 +5,7 @@ import Pagination from "./Pagination";
 import '../style/postingan.css'
 // import { getPostList } from "../api";
 import axios from "axios";
+import * as icons from "react-bootstrap-icons";
 
 const Postingan=()=>{
     const [post, setpost] = useState([])
@@ -58,7 +59,8 @@ const Postingan=()=>{
                                 <p className="postingan-text" dangerouslySetInnerHTML={{ __html: p.description }}></p>
                                 <div className="utils-postingan">
                                     <p className="created-time">{p.createdAt}</p>
-                                    <p className="created-by">Admin</p>
+                                    
+                                    <p className="created-by"><icons.PeopleFill className="postIcons" />Admin</p>
                                 </div>
                             </Col>
                         </div>                        

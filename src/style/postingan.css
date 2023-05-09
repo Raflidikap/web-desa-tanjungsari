@@ -51,7 +51,16 @@
 .utils-postingan{
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    
+}
+
+.utils-postingan p{
+    margin-right: 10px;
+}
+
+.postIcons{
+    width: 50px;
+    padding-left: 15px;
 }
 
 
