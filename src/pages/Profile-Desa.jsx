@@ -2,8 +2,6 @@ import React from "react";
 import { Image, Col, Row, Container } from "react-bootstrap";
 import "../style/profile-desa.css";
 import baganDesa from "../assets/baganTanjungsari.svg";
-// import bagan from "../assets/bagan_pemerintahan.svg";
-// import TextCard from "../components/TextCard";
 import Topografi from "../components/Topografi";
 import logoDesa from "../assets/logo-kabupaten.png";
 
