@@ -1,7 +1,7 @@
 .bigImageUmkm {
   width: 100%;
   height: 500px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .umkmTitle {
@@ -66,5 +66,18 @@
 
     .contactIcon{
         width: 15%;
+    }
+
+    .umkmParagraph{
+        font-size: 15px;
+    }
+
+    .bigImageUmkm{
+        height: 65%;
+    }
+
+    .umkmTitle, .umkmGalleryTitle, .contactTitle{
+        font-size: 25px;
+        font-weight: bold;
     }
 }

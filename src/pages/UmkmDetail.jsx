@@ -40,8 +40,8 @@ const DetailUMKM = () => {
         <Container>
           <h3 className="umkmTitle p-4 mt-5">{umkmDetail.name}</h3>
 
-          <p className="umkmParagraph pt-2 ps-4 pb-4 pe-4">
-            {umkmDetail.description}
+          <p className="umkmParagraph pt-2 ps-4 pb-4 pe-4" dangerouslySetInnerHTML={{__html:umkmDetail.description}}>
+            
           </p>
 
           <h3 className="umkmGalleryTitle pt-5">Gallery</h3>

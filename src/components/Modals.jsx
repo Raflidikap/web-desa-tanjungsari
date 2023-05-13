@@ -10,11 +10,11 @@ const Modals = (p) =>{
                 </Modal.Header>
                 <Row className="align-items-center justify-content-center modalsContent">
                     <Col md="4" sm="6">
-                        <img className="modalsImage text-center" src={p.data.image} alt="" />
+                        <img className="modalsImage fluid" src={p.data.image} alt="" />
                     </Col>
                     <Col md="8" sm="6">
-                        <Modal.Body className="modalsDescription">
-                            {p.data.description}
+                        <Modal.Body className="modalsDescription" dangerouslySetInnerHTML={{__html:p.data.description}}>
+                            
                         </Modal.Body>
                     </Col>
                 </Row>

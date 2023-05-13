@@ -1,5 +1,6 @@
 import React from "react";
 import * as icons from 'react-bootstrap-icons';
+import "../style/footer.css"
 import logo from "../assets/logo-kabupaten.png"
 const Footer = () =>{
     return (
