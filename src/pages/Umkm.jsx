@@ -1,13 +1,13 @@
 import { useState, React, useEffect } from "react";
 import { Container } from "react-bootstrap"
-import Pagination from "./Pagination";
+import Pagination from "../components/Pagination";
 import '../style/UmkmCard.css'
 import '../style/loadingOverlay.css'
 import { getUmkmList } from "../api";
 import { Link } from "react-router-dom";
 
 
-const UmkmCard = () =>{
+const Umkm = () =>{
     const [umkm, setumkm] = useState([])
     const [isShow, setIsShow] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
@@ -54,4 +54,4 @@ const UmkmCard = () =>{
     )
 }
 
-export default UmkmCard
+export default Umkm

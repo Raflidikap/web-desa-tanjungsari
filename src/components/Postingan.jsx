@@ -5,6 +5,7 @@ import '../style/postingan.css'
 import { getPostList } from "../api";
 import * as icons from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
+import moment from 'moment'
 
 const Postingan=()=>{
     const [post, setpost] = useState([])
@@ -42,7 +43,7 @@ const Postingan=()=>{
                                 </h3>
                                 <p className="postingan-text" dangerouslySetInnerHTML={{ __html: p.description }}></p>
                                 <div className="utils-postingan">
-                                    <p className="created-time">{p.createdAt}</p>
+                                    <p className="created-time">{moment(p.createdAt).format("L")}</p>
                                     
                                     <p className="created-by"><icons.PeopleFill className="postIcons" />Admin</p>
                                 </div>

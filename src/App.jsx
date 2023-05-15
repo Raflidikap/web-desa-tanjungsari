@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import UMKMDetail from './pages/UmkmDetail'
 import DetailPost from './pages/DetailPost'
 import DetailArtikel from './pages/DetailArtikel';
+import Umkm from './pages/Umkm';
+
 function App() {
   return (
     <div className="App">      
@@ -19,6 +21,7 @@ function App() {
           <Route path="/umkm/:id" element={<UMKMDetail/>} />
           <Route path="/artikel/:id" element={<DetailArtikel/>} />
           <Route path="/post/:id" element={<DetailPost/>} />
+          <Route path="/umkm" element={<Umkm/>} />
         </Routes>
       </Router>
       <Footer/>

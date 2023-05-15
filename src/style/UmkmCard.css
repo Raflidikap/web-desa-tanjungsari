@@ -1,6 +1,5 @@
 .umkm-section{
-    margin-top: 75px;
-    background-color: #CCDBCC;
+    background-color: #eeee;
 }
 .title-section{
     text-align: center;
@@ -10,7 +9,7 @@
 .title-section::after{
     content: '';
     display: block;
-    width: 70px;
+    width: 10%;
     margin: auto;
     margin-top: 10px;
     border-bottom: 5px solid #045E18;
@@ -24,6 +23,7 @@
 }
 .umkmImage-wrapper{
     width: 100%;
+    margin-left: 50px;
 }
 .umkmImage-wrapper img{
     border-radius: 20px 0 0 20px;
@@ -33,6 +33,7 @@
 .umkmDeskripsi-wrapper{
     padding: 30px;
     margin-left: 30px;
+    margin-right: 20px;
 }
 
 .umkmDeskripsi-wrapper p{
@@ -48,9 +49,23 @@
     font-size: 32px;
     text-transform: uppercase;
     padding: 5px;
-    border-bottom: 3px solid #878787;
+}
+.umkmDeskripsi-wrapper a{
+    text-decoration: none;
+    color: #045E18;
 }
 
+.umkmDeskripsi-wrapper a ::after{
+    content: '';
+    display: block;
+    width: 50%;
+    margin-top: 10px;
+    border-bottom: 5px solid #045E18;
+}
+
+.umkmDeskripsi-wrapper a:hover{
+    color: black;
+}
 .umkmCardImage{
     margin-right: 150px;
     object-fit: contain;
@@ -77,11 +92,18 @@
         margin-right: 0px;
         object-fit: scale-down;
         max-width: 75%;
-        margin: auto;
+        
     }
 }
 @media  screen and (min-width: 1200px) {
     .umkmImage-wrapper{
         width: 60%;
+    }
+    .umkmDeskripsi-wrapper a ::after{
+        content: '';
+        display: block;
+        width: 20%;
+        margin-top: 10px;
+        border-bottom: 5px solid #045E18;
     }
 }
