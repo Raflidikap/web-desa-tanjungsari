@@ -3,6 +3,8 @@ import { Card, Row, Col, Container } from "react-bootstrap";
 import Pagination from "./Pagination";
 import "../style/artikel.css";
 import { getArticleList } from "../api";
+import { Link } from "react-router-dom";
+
 
 const Artikel = () => {
   const[artikel, setArtikel] = useState([])
@@ -40,7 +42,9 @@ const Artikel = () => {
             />
             <Card.Body className="p-4">
               <Card.Text className="artikelCardAuthor">{artikel.name}</Card.Text>
-              <Card.Title className="artikelCardTitle">{artikel.name}</Card.Title>
+              <Card.Title className="artikelCardTitle">
+              <Link to={`artikel/${artikel._id}`} ><h3>{artikel.name}</h3></Link>
+                </Card.Title>
               <Card.Text className="artikelCardParagraph">
                 <span dangerouslySetInnerHTML={{ __html: artikel.description }}></span>
               </Card.Text>

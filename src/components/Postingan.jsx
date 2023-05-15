@@ -1,61 +1,45 @@
 import React, { useState, useEffect } from "react";
 import {Row, Col, Container} from 'react-bootstrap'
 import Pagination from "./Pagination";
-// import logo from "../assets/pemandangan.jpg";
 import '../style/postingan.css'
-// import { getPostList } from "../api";
-import axios from "axios";
+import { getPostList } from "../api";
 import * as icons from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 
 const Postingan=()=>{
     const [post, setpost] = useState([])
 
-    const [posts] = useState([
-        {title: 'Hakiki Collection', body:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit error provident quo mollitia sed ea ratione ipsa dolore deserunt nisi id deleniti doloremque odit pariatur, repudiandae nobis eveniet voluptatem dolorum sapiente amet magni enim fuga.', author:'Admin', date:'20 April 2023', id:1},
-        {title: 'Kayu Haji ..', body:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit error provident quo mollitia sed ea ratione ipsa dolore deserunt nisi id deleniti doloremque odit pariatur, repudiandae nobis eveniet voluptatem dolorum sapiente amet magni enim fuga.', author:'Admin', date:'20 April 2023', id:2},
-        {title: 'Konveksi Deni Dhafir', body:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit error provident quo mollitia sed ea ratione ipsa dolore deserunt nisi id deleniti doloremque odit pariatur, repudiandae nobis eveniet voluptatem dolorum sapiente amet magni enim fuga.', author:'Admin', date:'20 April 2023', id:3},
-        {title: 'Hakiki Collection 2', body:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit error provident quo mollitia sed ea ratione ipsa dolore deserunt nisi id deleniti doloremque odit pariatur, repudiandae nobis eveniet voluptatem dolorum sapiente amet magni enim fuga.', author:'Admin', date:'20 April 2023', id:4},
-        {title: 'Kayu Haji 2', body:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit error provident quo mollitia sed ea ratione ipsa dolore deserunt nisi id deleniti doloremque odit pariatur, repudiandae nobis eveniet voluptatem dolorum sapiente amet magni enim fuga.', author:'Admin', date:'20 April 2023', id:5},
-        {title: 'Konveksi Deni Dhafir 2', body:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit error provident quo mollitia sed ea ratione ipsa dolore deserunt nisi id deleniti doloremque odit pariatur, repudiandae nobis eveniet voluptatem dolorum sapiente amet magni enim fuga.', author:'Admin', date:'20 April 2023', id:6},
-    ]);
-    const [currentPage, setCurrentPage] =useState(1)
-    const [postPerPage ] = useState(5)
+    const [isShow, setIsShow] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
+    const postPerPage = 1
+    const [page, setPage] = useState(1)  
 
-    const lastposts = currentPage * postPerPage
-    const firstposts = lastposts - postPerPage
-    const currentposts = post.slice(firstposts, lastposts)
-
-    // useEffect(()=>{
-    //     getPostList().then((result) =>{
-    //         setpost(result)
-    //     })
-    //     console.log(post)
-    // }, [])
 
     useEffect(()=>{
-        axios.post('https://joyous-pink-catfish.cyclic.app/posts/search?page=1&limit=1', {
-        category: 'post',
-        })
+        setIsLoading(true)
+        getPostList(page, postPerPage)
         .then( (response) =>{
-          setpost(response.data.docs);
+          setpost(response.docs);
+          if(response?.docs?.length === postPerPage) setIsShow(true)
+          setIsLoading(false)
         })
-        .catch( (error) =>{
-            console.log(error);
-        });
-      }, [])
+      }, [isShow, page])
 
     return(
         <>
             <Container className="postingan-container">
                 <h1 className="text-center mb-5 mt-5 postingan-title-section">POST</h1>
+                { isLoading ? <div className="spinner"></div>:
                 <Row className="justify-content-center">
-                    {currentposts.map((p, index) =>(
+                    {post.map((p, index) =>(
                         <div key={index} className="postingan-wrapper">
                             <Col xl="6"  className="image-postingan-wrapper">
                                 <img className="postingan-image fluid" src={p.image} alt="" />
                             </Col>
                             <Col xl="6">
-                                <h3 className="postingan-title">{p.name}</h3>
+                                <h3 className="postingan-title">
+                                    <Link to={`post/${p._id}`} ><h3>{p.name}</h3></Link>
+                                </h3>
                                 <p className="postingan-text" dangerouslySetInnerHTML={{ __html: p.description }}></p>
                                 <div className="utils-postingan">
                                     <p className="created-time">{p.createdAt}</p>
@@ -66,9 +50,14 @@ const Postingan=()=>{
                         </div>                        
                     ))}
                 </Row>
-                <div className="pagination-button text-center">
-                    <Pagination eventLength={posts.length} eventPerPage={postPerPage} setCurrentPage={setCurrentPage}/>
-                </div>
+}
+                { isShow ?
+                    <div className="pagination-button text-center">
+                        <Pagination isLoading={isLoading} currentPage={page} setPage={(page) => setPage(page)} totalPages={post?.totalPages} eventLength={post?.docs?.length} eventPerPage={postPerPage} setCurrentPage={post?.page}/>
+                    </div>
+                    : ""
+                    }
+
             </Container>
         </>
     );

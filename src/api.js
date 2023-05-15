@@ -31,3 +31,22 @@ export const getUmkmListById = (id) =>{
 
     return umkms
 }
+
+
+export const getArticleListById = (id) =>{
+    const articles = axios.post(`${process.env.REACT_APP_BASEURL}/posts/search?page=1&limit=1`, {
+        category:'article',
+        id: id
+        })
+
+    return articles
+}
+
+export const getPostListById = (id) =>{
+    const postingan = axios.post(`${process.env.REACT_APP_BASEURL}/posts/get-by-id`, {
+        id: id
+        })
+
+    return postingan
+}
+
