@@ -6,6 +6,7 @@ import Header from './components/Header'
 import ProfileDesa from "./pages/Profile-Desa"
 import Footer from './components/Footer';
 import UMKMDetail from './pages/UmkmDetail'
+import Umkm from './pages/Umkm';
 function App() {
   return (
     <div className="App">      
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Beranda/>} />
           <Route path="/profiledesa" element={<ProfileDesa/>} />
           <Route path="/umkm/:id" element={<UMKMDetail/>} />
+          <Route path="/umkm" element={<Umkm/>} />
         </Routes>
       </Router>
       <Footer/>

@@ -27,25 +27,6 @@ const Footer = () =>{
                         </p>
                     </div>
 
-                    <div className="col-md-2 col-lg-2 col-xl-1 mx-auto mb-4">
-                        <h6 className="text-uppercase fw-bold">UMKM</h6>
-                        <hr
-                            className="mb-4 mt-0 d-inline-block mx-auto"
-                            style={{width: "60px", backgroundColor: "#7c4dff", height: "2px"}}
-                            />
-                        <p>
-                        <a href="#!" className="text-dark">MDBootstrap</a>
-                        </p>
-                        <p>
-                        <a href="#!" className="text-dark">MDWordPress</a>
-                        </p>
-                        <p>
-                        <a href="#!" className="text-dark">BrandFlow</a>
-                        </p>
-                        <p>
-                        <a href="#!" className="text-dark">Bootstrap Angular</a>
-                        </p>
-                    </div>
 
                     <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                         <h6 className="text-uppercase fw-bold">Kontak</h6>

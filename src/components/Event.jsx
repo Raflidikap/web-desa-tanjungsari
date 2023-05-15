@@ -59,7 +59,7 @@ const Event=()=>{
         <div className="event-wrapper">
         <Container className=''>
             <h2 className='text-center p-4 event-title'>Event</h2>
-            <Row className='justify-content-center'>
+            <Row className=''>
                 <EventsCard/>
             </Row>
             <div className="pagination-button text-center">

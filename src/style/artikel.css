@@ -44,7 +44,7 @@
   flex-direction: row;
   width: inherit;
   width: 550px;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 .artikelCardParagraph{
   display: -webkit-box;
