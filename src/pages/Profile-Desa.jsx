@@ -17,26 +17,7 @@ const Profile = () => {
             <Col sm={8}>
               <h3 className="desaDescriptionTitle">Desa Tanjungsari</h3>
               <p className="desaDescriptionParagraph">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
-                corporis maiores dolore dignissimos minus temporibus, adipisci
-                voluptas delectus unde, at vero commodi ipsa molestias
-                distinctio voluptate, error dolorem fugit necessitatibus vitae
-                veniam nobis perspiciatis ipsum. Molestiae reiciendis ab
-                excepturi eveniet atque? Quam aperiam est ducimus quia vitae
-                omnis voluptas sed, possimus qui nulla. Exercitationem pariatur
-                consequatur deleniti! Ipsam, omnis natus. Labore quibusdam
-                sapiente tempora accusamus? Accusamus voluptas sed molestias
-                culpa perspiciatis facere ipsam veniam, voluptates natus id iure
-                voluptatem doloribus laborum vel nulla numquam, repellat fugit,
-                expedita recusandae adipisci. Quis, harum. Fugit, harum, porro
-                sapiente, laudantium perferendis fuga esse eum odit reiciendis
-                modi blanditiis veritatis quibusdam. Accusamus recusandae,
-                blanditiis, ea ad fugit repellat vitae laboriosam voluptates non
-                dicta, a ipsum eum minus obcaecati vel rerum. Et provident
-                maxime, impedit suscipit corrupti quas consequatur similique
-                nostrum quidem quibusdam repudiandae sapiente temporibus error
-                consectetur assumenda maiores veniam porro illo, autem nam
-                delectus.
+              Desa Tanjungsari adalah salah satu Desa di wilayah Kecamatan Tanjungsari Kabupaten Bogor dengan Luas Wilayah kurang lebih 760,15 Ha. Dan secara Administrasi terbagi dalam 4 Dusun, 8 RW dan 18 RT. Desa Tanjungsari merupakan desa yang berada di dataran Sedang dengan ketinggian 200-500 m dpl. Sebagian besar wilayah Desa Tanjungsari adalah dataran, hanya sebagian kecil yang merupakan lereng itupun tidak terlalu terjal dengan kemiringan antara 15-40 derajat. Disebelah Selatan dibatasi oleh Gunung Batu dan disebelah Timur dibatasi oleh Jalan Raya Trans Yogi, di sebelah Barat dan Utara dibatasi oleh batas alam berupa kali kecil.
               </p>
             </Col>
           </Row>
@@ -45,11 +26,11 @@ const Profile = () => {
 
       <div className="pemerintahanDescriptionContainer p-4">
         <Container>
-        <h3 className="pemerintahanTitle mb-4">
+        <h3 className="pemerintahanTitle">
           Struktur Pemerintahan Desa Tanjungsari
         </h3>
           <Row className="p-5 ms-4 me-4 kepalaDesaRow">
-            <Col sm={8}>
+            {/* <Col sm={8}>
               <h3 className="kepalaDesaTitle">Kepala Desa</h3>
               <p className="kepalaDesaParagraph">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -66,23 +47,23 @@ const Profile = () => {
                 recusandae quis temporibus. Quisquam quibusdam odio consequuntur
                 veritatis inventore.
               </p>
-            </Col>
-            <Col
+            </Col> */}
+            {/* <Col
               sm={4}
               className="d-flex align-items-center justify-content-end"
             >
               <Image src={logoDesa} className="img-fluid kepalaDesaImg"></Image>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
         <div className="baganImage">
           <Image src={baganDesa} className="img-fluid mx-auto d-block"></Image>
-          <p className="text-center baganAlt">
+          {/* <p className="text-center baganAlt">
             Bagan Pemerintahan Desa Tanjungsari
-          </p>
+          </p> */}
         </div>
       </div>
-      <div className="visiDanMisiContainer p-4">
+      {/* <div className="visiDanMisiContainer p-4">
         <Row className="visiDanMisiRow">
           <Col md={6}>
             <h3 className="text-center visiContainer">Visi Desa Tanjungsari</h3>
@@ -105,7 +86,7 @@ const Profile = () => {
             </ul>
           </Col>
         </Row>
-      </div>
+      </div> */}
       <Topografi />
     </>
   );

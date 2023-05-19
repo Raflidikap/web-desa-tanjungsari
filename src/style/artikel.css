@@ -32,6 +32,11 @@
   font-weight: bold;
 }
 
+.card-title a{
+  text-decoration: none;
+  color: #045E18;
+}
+
 .artikel-container{
   max-width: 700px;
 }

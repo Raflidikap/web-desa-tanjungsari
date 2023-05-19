@@ -23,6 +23,7 @@ const UmkmCard = () =>{
         })
     }, [isShow, page])
 
+
     return(
         <>
             <div className="umkm-section">
@@ -35,7 +36,7 @@ const UmkmCard = () =>{
                                 <img className="umkmCardImage fluid" src={umkm.image[0]} alt="" />
                             </div>
                             <div className="umkmDeskripsi-wrapper">
-                                <Link to={`umkm/${umkm._id}`} ><h3>{umkm.name}</h3></Link>
+                                <Link to={`umkmDetail/${umkm._id}`} ><h3>{umkm.name}</h3></Link>
                                 
                                 <p dangerouslySetInnerHTML={{__html:umkm.description}}></p>
                             </div>

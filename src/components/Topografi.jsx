@@ -25,21 +25,21 @@ const Topografi = () => {
             <Row className="p-4">
               <Col xs={6} className="text-center">
                 <icons.PeopleFill className="topografiIcons" />
-                <p>Penduduk 3500</p>
+                <p>6.743 Penduduk</p>
               </Col>
               <Col xs={6} className="text-center">
                 <icons.PeopleFill className="topografiIcons" />
-                <p>Penduduk 3500</p>
+                <p>4 Dusun</p>
               </Col>
             </Row>
             <Row className="p-4">
               <Col xs={6} className="text-center">
                 <icons.PeopleFill className="topografiIcons" />
-                <p>Penduduk 3500</p>
+                <p>8 RW</p>
               </Col>
               <Col xs={6} className="text-center">
                 <icons.PeopleFill className="topografiIcons" />
-                <p>Penduduk 3500</p>
+                <p>18 RT</p>
               </Col>
             </Row>
           </Col>

@@ -20,6 +20,7 @@
     flex-direction: row;
     background-color: whitesmoke ;
     margin-bottom: 50px;
+    
 }
 .umkmImage-wrapper{
     width: 100%;
@@ -34,6 +35,8 @@
     padding: 30px;
     margin-left: 30px;
     margin-right: 20px;
+    height: 300px;
+    overflow: hidden;
 }
 
 .umkmDeskripsi-wrapper p{
@@ -44,6 +47,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-bottom: 20px;
 }
 .umkmDeskripsi-wrapper h3{
     font-size: 32px;
@@ -68,6 +72,7 @@
 }
 .umkmCardImage{
     margin-right: 150px;
+    min-width: 100px;
     object-fit: contain;
     display: block;
     align-items: center;
@@ -80,6 +85,9 @@
     }
     .umkmImage-wrapper{
         width: 100%;
+    }
+    .umkmDeskripsi-wrapper {
+        height: 250px;
     }
     .umkmDeskripsi-wrapper p, h3{
         font-size: small;

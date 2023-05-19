@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Beranda/>} />
           <Route path="/profiledesa" element={<ProfileDesa/>} />
-          <Route path="/umkm/:id" element={<UMKMDetail/>} />
+          <Route exact path="umkmDetail/:id" element={<UMKMDetail/>} />
           <Route path="/artikel/:id" element={<DetailArtikel/>} />
           <Route path="/post/:id" element={<DetailPost/>} />
           <Route path="/umkm" element={<Umkm/>} />

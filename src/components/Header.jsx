@@ -31,7 +31,7 @@ const header = () => {
             </NavLink>
             <NavLink to='/profiledesa'
             className={({isActive})=> (isActive ? activeLink : normalLink)}>
-            Tentang Desa
+            Profil Desa
             </NavLink>
             <NavLink to='/umkm'
             className={({isActive})=> (isActive ? activeLink : normalLink)}>

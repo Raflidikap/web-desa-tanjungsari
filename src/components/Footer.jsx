@@ -22,9 +22,9 @@ const Footer = () =>{
                             className="mb-4 mt-0 d-inline-block mx-auto"
                             style={{width: "60px", backgroundClip: "#7c4dff", height: "2px"}}
                             />
-                        <p>
+                        {/* <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit error provident quo mollitia sed ea ratione ipsa dolore deserunt nisi id deleniti doloremque odit pariatur, repudiandae nobis eveniet voluptatem dolorum sapiente amet magni enim fuga.
-                        </p>
+                        </p> */}
                     </div>
 
 
@@ -34,10 +34,10 @@ const Footer = () =>{
                             className="mb-4 mt-0 d-inline-block mx-auto"
                             style={{width: "60px", backgroundColor: "#7c4dff", height: "2px"}}
                             />
-                        <p><icons.BuildingFill/> New York, NY 10012, US</p>
-                        <p><icons.EnvelopeAtFill/> info@example.com</p>
-                        <p><icons.TelephoneFill/>+ 01 234 567 88</p>
-                        <p><icons.TelephoneFill/> + 01 234 567 89</p>
+                        <p><icons.BuildingFill/> </p>
+                        <p><icons.EnvelopeAtFill/> desaku.tanjungsari01@gmail.com</p>
+                        <p><icons.TelephoneFill/> +62 85774978615</p>
+                        {/* <p><icons.TelephoneFill/> +62 8</p> */}
                     </div>
                     </div>
                 </div>

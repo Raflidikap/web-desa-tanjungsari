@@ -49,7 +49,7 @@
 
 .pemerintahanTitle {
   font-size: 36px;
-  text-align: right;
+  text-align: center;
 }
 .kepalaDesaTitle {
   font-size: 32px;
@@ -80,7 +80,7 @@
   }
   .pemerintahanTitle {
     font-size: 26px;
-    text-align: right;
+    text-align: left;
   }
   .kepalaDesaTitle {
     font-size: 24px;

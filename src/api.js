@@ -11,7 +11,7 @@ export const getPostList = async () =>{
     return posts
 }
 export const getEventList = () =>{
-    const events = axios.post(`${process.env.REACT_APP_BASEURL}posts/search?page=1&limit=1`, {
+    const events = axios.post(`${process.env.REACT_APP_BASEURL}posts/search?page=1&limit=3`, {
         category: 'event',
         })
     return events
