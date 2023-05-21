@@ -16,6 +16,9 @@ const Event=()=>{
 
     const [currentPage, setCurrentPage] =useState(1)
     const [eventPerPage] = useState(3)
+
+    const postPerPage = 1
+    const [isLoading, setIsLoading] = useState(true)
     
     const handleClose = () => setIsShow(false);
     const handleShow = (i) => {
@@ -31,11 +34,13 @@ const Event=()=>{
         getEventList()
         .then( (response) =>{
           setEvent(response.data.docs);
+          if(response?.data?.docs?.length === postPerPage) setIsShow(true)
+          setIsLoading(false)
         })
         .catch( (error) =>{
             console.log(error);
         });
-      }, [])
+      }, [isShow])
 
     const EventsCard = () => {
         return currentevents.map((event, i)=>{
@@ -59,9 +64,12 @@ const Event=()=>{
         <div className="event-wrapper">
         <Container className=''>
             <h2 className='text-center p-4 event-title'>Event</h2>
+            {isLoading? <div className="spinner"></div>:
+            
             <Row className=''>
                 <EventsCard/>
             </Row>
+}
             <div className="pagination-button text-center">
                 <Pagination eventLength={event.length} eventPerPage={eventPerPage} setCurrentPage={setCurrentPage}/>
             </div>

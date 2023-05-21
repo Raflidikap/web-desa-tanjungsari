@@ -16,13 +16,13 @@
 
 
 .event-image {
-  max-width: 150px;
+  width: 150px;
   background: no-repeat transparent;
   border: none;
 }
 
 .event-card {
-  max-height: fit-content;
+  height: 350px;
   padding: 10px;
   text-align: justify;
   border-radius: 5px;
@@ -34,6 +34,7 @@
 .event-wrapper {
   width: 100%;
   background-color: #CCDBCC;
+  padding-bottom: 50px;
 }
 
 .event-more-btn{

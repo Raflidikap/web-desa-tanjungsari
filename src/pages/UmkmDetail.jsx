@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Image, Container, Row, Col } from "react-bootstrap";
-import logo from "../assets/logo-kabupaten.png";
-import * as icons from "react-bootstrap-icons";
+import { Image, Container, Row } from "react-bootstrap";
+// import logo from "../assets/logo-kabupaten.png";
+// import * as icons from "react-bootstrap-icons";
 import "../style/umkmdetail.css";
 import { useParams } from "react-router-dom";
 import { getUmkmListById } from "../api";
@@ -60,7 +60,7 @@ const DetailUMKM = () => {
           </Container>
         </Container>
 
-        <div className="contactContainer p-4">
+        {/* <div className="contactContainer p-4">
           <h3 className="contactTitle p-2">Contact</h3>
           <Row>
             <Col md={4} className="contactImgCol p-4">
@@ -75,7 +75,7 @@ const DetailUMKM = () => {
               </Row>
             </Col>
           </Row>
-        </div>
+        </div> */}
       </div>
     </>
   );
