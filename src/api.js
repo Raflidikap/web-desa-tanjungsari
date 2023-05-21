@@ -10,6 +10,13 @@ export const getPostList = async () =>{
     .then(res=>res.json())
     return posts
 }
+export const getCarouselItems = async () =>{
+    const carousel = await fetch(`${process.env.REACT_APP_BASEURL}/home-carousel-images`)
+    .then(res => res.json())
+
+    
+    return carousel
+}
 export const getEventList = () =>{
     const events = axios.post(`${process.env.REACT_APP_BASEURL}posts/search?page=1&limit=3`, {
         category: 'event',
@@ -49,4 +56,3 @@ export const getPostListById = (id) =>{
 
     return postingan
 }
-

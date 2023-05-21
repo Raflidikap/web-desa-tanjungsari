@@ -16,7 +16,8 @@
 
 
 .event-image {
-  width: 150px;
+  object-fit:cover;
+  height: 200px;
   background: no-repeat transparent;
   border: none;
 }
@@ -28,7 +29,6 @@
   border-radius: 5px;
   border-radius: 20px;
   background: linear-gradient(315deg, #dddddd, #ffffff);
-  box-shadow:  -18px -18px 36px #e4e4e4;
 }
 
 .event-wrapper {
