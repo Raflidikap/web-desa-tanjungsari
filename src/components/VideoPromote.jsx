@@ -10,7 +10,7 @@ const VideoPromote = () => {
           <Col className="xl-6 pt-4">
             <iframe
             className="pe-5 videoFrame responsive-iframe"
-              src="https://www.youtube.com/embed/tgbNymZ7vqY"
+              src="https://www.youtube.com/embed/MreF02nlTO8"
             ></iframe>
           </Col>
           <Col className="xl-6 pt-3 videoTextWrapper">
